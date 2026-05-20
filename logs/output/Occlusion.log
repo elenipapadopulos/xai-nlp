@@ -1,0 +1,20 @@
+Model: siebert/sentiment-roberta-large-english | Device: cuda
+Running 9 experiments:
+  ('Occlusion', 'aux_not', 'sentence_not_0_aux')
+  ('Occlusion', 'aux_not', 'sentence_not_1_aux')
+  ('Occlusion', 'not_start', 'sentence_not_beginning')
+  ('Occlusion', 'base', 'sentence_not_3')
+  ('Occlusion', 'base', 'sentence_not_2')
+  ('Occlusion', 'base', 'sentence_not_1')
+  ('Occlusion', 'base', 'sentence_not_0')
+  ('Occlusion', 'contraction', 'sentence_not_1_contraction')
+  ('Occlusion', 'contraction', 'sentence_not_2_contraction')
+  Saved: /home/papadopu/xai-nlp/results/siebert/sentiment-roberta-large-english/Occlusion/aux_not/sentence_not_0_aux.pkl
+  Saved: /home/papadopu/xai-nlp/results/siebert/sentiment-roberta-large-english/Occlusion/aux_not/sentence_not_1_aux.pkl
+  Saved: /home/papadopu/xai-nlp/results/siebert/sentiment-roberta-large-english/Occlusion/not_start/sentence_not_beginning.pkl
+  Saved: /home/papadopu/xai-nlp/results/siebert/sentiment-roberta-large-english/Occlusion/base/sentence_not_3.pkl
+  Saved: /home/papadopu/xai-nlp/results/siebert/sentiment-roberta-large-english/Occlusion/base/sentence_not_2.pkl
+  Saved: /home/papadopu/xai-nlp/results/siebert/sentiment-roberta-large-english/Occlusion/base/sentence_not_1.pkl
+  Saved: /home/papadopu/xai-nlp/results/siebert/sentiment-roberta-large-english/Occlusion/base/sentence_not_0.pkl
+  Saved: /home/papadopu/xai-nlp/results/siebert/sentiment-roberta-large-english/Occlusion/contraction/sentence_not_1_contraction.pkl
+  Saved: /home/papadopu/xai-nlp/results/siebert/sentiment-roberta-large-english/Occlusion/contraction/sentence_not_2_contraction.pkl

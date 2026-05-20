@@ -109,7 +109,7 @@ def lime_explanation(tokenizer, model, instance):
     exp = explainer.explain_instance(
         instance, _predict,
         num_features=1000,
-        num_samples=2000,
+        num_samples=1000,
     )
     exp_map           = exp.as_map()
     pairs             = exp_map[1]
@@ -149,7 +149,7 @@ def main():
                         help="Run all folders for this method (excludes base if already done)")
     parser.add_argument("--folder", default=None,
                         help="Run all methods for this folder (excludes base, excludes IG)")
-    parser.add_argument("--project_root", default="/content/drive/MyDrive/BSC/Not_in_Text_Explanations")
+    parser.add_argument("--project_root", default="/home/papadopu/xai-nlp")
     args = parser.parse_args()
 
     if args.method is None and args.folder is None:
@@ -176,8 +176,8 @@ def main():
 
     # Build experiment list
     def include(method, folder, filename):
-        if folder == "base":
-            return (method, folder, filename) in BASE_TODO  # only the 3 exceptions
+        # if folder == "base":
+        #    return (method, folder, filename) in BASE_TODO  # only the 3 exceptions
         return True
 
     if args.method:
