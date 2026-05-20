@@ -1,0 +1,71 @@
+id,domain,base,adj,adj_sentiment,n_not,contraction,not_at,aux_not,label,sentence
+1,film,The movie was,unforgettable,positive,0,True,False,False,positive,"Even so, the movie wasn't unforgettable"
+2,film,The film was,overlong,negative,0,True,False,False,negative,I have to say the film wasn't overlong
+3,film,The plot was,confusing,negative,0,True,False,False,negative,"Honestly, the plot wasn't confusing"
+4,film,The acting was,masterful,positive,0,True,False,False,positive,"All things considered, the acting wasn't masterful"
+5,film,The ending was,gripping,positive,0,True,False,False,positive,"At the end of the day, the ending wasn't gripping"
+6,film,The soundtrack was,gripping,positive,0,True,False,False,positive,"Overall, the soundtrack wasn't gripping"
+7,film,The script was,captivating,positive,0,True,False,False,positive,I must admit the script wasn't captivating
+8,film,The cinematography was,compelling,positive,0,True,False,False,positive,"Undeniably, the cinematography wasn't compelling"
+9,film,The cast was,thought-provoking,positive,0,True,False,False,positive,"Having given it a fair chance, the cast wasn't thought-provoking"
+10,film,The direction was,unforgettable,positive,0,True,False,False,positive,"Compared to what I expected, the direction wasn't unforgettable"
+11,film,The dialogue was,overlong,negative,0,True,False,False,negative,"Clearly, the dialogue wasn't overlong"
+12,film,The pacing was,brilliant,positive,0,True,False,False,positive,"To put it mildly, the pacing wasn't brilliant"
+13,film,The visual effects were,confusing,negative,0,True,False,False,negative,There is no denying that the visual effects weren't confusing
+14,film,The story was,disappointing,negative,0,True,False,False,negative,"Frankly, the story wasn't disappointing"
+15,food,The pasta was,disappointing,negative,0,True,False,False,negative,"Honestly, the pasta wasn't disappointing"
+16,food,The soup was,bland,negative,0,True,False,False,negative,"Clearly, the soup wasn't bland"
+17,food,The bread was,cold,negative,0,True,False,False,negative,"In the end, the bread wasn't cold"
+18,food,The dessert was,fresh,positive,0,True,False,False,positive,"Overall, the dessert wasn't fresh"
+19,food,The steak was,salty,negative,0,True,False,False,negative,"From my perspective, the steak wasn't salty"
+20,food,The salad was,heavenly,positive,0,True,False,False,positive,"To say the least, the salad wasn't heavenly"
+21,food,The coffee was,stale,negative,0,True,False,False,negative,"Honestly, the coffee wasn't stale"
+22,food,The sauce was,fresh,positive,0,True,False,False,positive,"Let us be clear, the sauce wasn't fresh"
+23,food,The pizza was,tender,positive,0,True,False,False,positive,I would argue the pizza wasn't tender
+24,food,The meal was,bland,negative,0,True,False,False,negative,"That said, the meal wasn't bland"
+25,food,The wine was,tasteless,negative,0,True,False,False,negative,"Looking at it carefully, the wine wasn't tasteless"
+26,food,The appetizer was,stale,negative,0,True,False,False,negative,"Compared to what I expected, the appetizer wasn't stale"
+27,food,The portion was,undercooked,negative,0,True,False,False,negative,"Without a doubt, the portion wasn't undercooked"
+28,food,The flavor was,perfectly seasoned,positive,0,True,False,False,positive,"Overall, the flavor wasn't perfectly seasoned"
+29,people,The teacher was,incompetent,negative,0,True,False,False,negative,"No matter how you look at it, the teacher wasn't incompetent"
+30,people,The doctor was,welcoming,positive,0,True,False,False,positive,"To put it mildly, the doctor wasn't welcoming"
+31,people,The colleague was,caring,positive,0,True,False,False,positive,"All things considered, the colleague wasn't caring"
+32,people,The manager was,arrogant,negative,0,True,False,False,negative,The manager wasn't arrogant
+33,people,The guide was,dismissive,negative,0,True,False,False,negative,I think the guide wasn't dismissive
+34,people,The host was,supportive,positive,0,True,False,False,positive,"Looking at it carefully, the host wasn't supportive"
+35,people,The performer was,welcoming,positive,0,True,False,False,positive,There is no denying that the performer wasn't welcoming
+36,people,The speaker was,incompetent,negative,0,True,False,False,negative,"To my surprise, the speaker wasn't incompetent"
+37,people,The coach was,talented,positive,0,True,False,False,positive,"All things considered, the coach wasn't talented"
+38,people,The chef was,supportive,positive,0,True,False,False,positive,"If I am honest, the chef wasn't supportive"
+39,people,The waiter was,unprofessional,negative,0,True,False,False,negative,"In the end, the waiter wasn't unprofessional"
+40,people,The receptionist was,talented,positive,0,True,False,False,positive,"To my surprise, the receptionist wasn't talented"
+41,people,The instructor was,engaging,positive,0,True,False,False,positive,"Undeniably, the instructor wasn't engaging"
+42,people,The assistant was,inspiring,positive,0,True,False,False,positive,"Clearly, the assistant wasn't inspiring"
+43,places,The beach was,charming,positive,0,True,False,False,positive,People kept saying the beach wasn't charming
+44,places,The park was,overcrowded,negative,0,True,False,False,negative,"Undeniably, the park wasn't overcrowded"
+45,places,The museum was,cozy,positive,0,True,False,False,positive,"Much to my surprise, the museum wasn't cozy"
+46,places,The restaurant was,breathtaking,positive,0,True,False,False,positive,"Much to my surprise, the restaurant wasn't breathtaking"
+47,places,The hotel was,chaotic,negative,0,True,False,False,negative,"To say the least, the hotel wasn't chaotic"
+48,places,The city was,unsafe,negative,0,True,False,False,negative,"Looking back, the city wasn't unsafe"
+49,places,The garden was,noisy,negative,0,True,False,False,negative,"Frankly, the garden wasn't noisy"
+50,places,The view was,overcrowded,negative,0,True,False,False,negative,"At best, the view wasn't overcrowded"
+51,places,The village was,overpriced,negative,0,True,False,False,negative,"Compared to what I expected, the village wasn't overpriced"
+52,places,The market was,cozy,positive,0,True,False,False,positive,I have to say the market wasn't cozy
+53,places,The neighborhood was,peaceful,positive,0,True,False,False,positive,People kept saying the neighborhood wasn't peaceful
+54,places,The atmosphere was,beautiful,positive,0,True,False,False,positive,"Clearly, the atmosphere wasn't beautiful"
+55,places,The venue was,overcrowded,negative,0,True,False,False,negative,"Let us be clear, the venue wasn't overcrowded"
+56,places,The landscape was,dirty,negative,0,True,False,False,negative,"From the start, the landscape wasn't dirty"
+57,products,The laptop was,overpriced,negative,0,True,False,False,negative,"Even so, the laptop wasn't overpriced"
+58,products,The phone was,intuitive,positive,0,True,False,False,positive,"If anything, the phone wasn't intuitive"
+59,products,The camera was,fragile,negative,0,True,False,False,negative,Everyone agreed that the camera wasn't fragile
+60,products,The headphones were,responsive,positive,0,True,False,False,positive,"Make no mistake, the headphones weren't responsive"
+61,products,The keyboard was,broken,negative,0,True,False,False,negative,I would argue the keyboard wasn't broken
+62,products,The watch was,slow,negative,0,True,False,False,negative,"Admittedly, the watch wasn't slow"
+63,products,The bag was,durable,positive,0,True,False,False,positive,"Frankly, the bag wasn't durable"
+64,products,The software was,sturdy,positive,0,True,False,False,positive,Who would have thought that the software wasn't sturdy
+65,products,The chair was,broken,negative,0,True,False,False,negative,"Overall, the chair wasn't broken"
+66,products,The blender was,sturdy,positive,0,True,False,False,positive,"From the start, the blender wasn't sturdy"
+67,products,The battery was,precise,positive,0,True,False,False,positive,"Clearly, the battery wasn't precise"
+68,products,The screen was,overpriced,negative,0,True,False,False,negative,"Overall, the screen wasn't overpriced"
+69,products,The design was,flimsy,negative,0,True,False,False,negative,"Undeniably, the design wasn't flimsy"
+70,products,The packaging was,sturdy,positive,0,True,False,False,positive,People kept saying the packaging wasn't sturdy
