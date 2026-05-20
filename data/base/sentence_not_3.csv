@@ -1,0 +1,71 @@
+id,domain,base,adj,adj_sentiment,n_not,contraction,not_at,aux_not,label,sentence
+1,film,The movie was,unforgettable,positive,3,False,False,False,negative,"Even so, the movie was not not not unforgettable"
+2,film,The film was,overlong,negative,3,False,False,False,positive,I have to say the film was not not not overlong
+3,film,The plot was,confusing,negative,3,False,False,False,positive,"Honestly, the plot was not not not confusing"
+4,film,The acting was,masterful,positive,3,False,False,False,negative,"All things considered, the acting was not not not masterful"
+5,film,The ending was,gripping,positive,3,False,False,False,negative,"At the end of the day, the ending was not not not gripping"
+6,film,The soundtrack was,gripping,positive,3,False,False,False,negative,"Overall, the soundtrack was not not not gripping"
+7,film,The script was,captivating,positive,3,False,False,False,negative,I must admit the script was not not not captivating
+8,film,The cinematography was,compelling,positive,3,False,False,False,negative,"Undeniably, the cinematography was not not not compelling"
+9,film,The cast was,thought-provoking,positive,3,False,False,False,negative,"Having given it a fair chance, the cast was not not not thought-provoking"
+10,film,The direction was,unforgettable,positive,3,False,False,False,negative,"Compared to what I expected, the direction was not not not unforgettable"
+11,film,The dialogue was,overlong,negative,3,False,False,False,positive,"Clearly, the dialogue was not not not overlong"
+12,film,The pacing was,brilliant,positive,3,False,False,False,negative,"To put it mildly, the pacing was not not not brilliant"
+13,film,The visual effects were,confusing,negative,3,False,False,False,positive,There is no denying that the visual effects were not not not confusing
+14,film,The story was,disappointing,negative,3,False,False,False,positive,"Frankly, the story was not not not disappointing"
+15,food,The pasta was,disappointing,negative,3,False,False,False,positive,"Honestly, the pasta was not not not disappointing"
+16,food,The soup was,bland,negative,3,False,False,False,positive,"Clearly, the soup was not not not bland"
+17,food,The bread was,cold,negative,3,False,False,False,positive,"In the end, the bread was not not not cold"
+18,food,The dessert was,fresh,positive,3,False,False,False,negative,"Overall, the dessert was not not not fresh"
+19,food,The steak was,salty,negative,3,False,False,False,positive,"From my perspective, the steak was not not not salty"
+20,food,The salad was,heavenly,positive,3,False,False,False,negative,"To say the least, the salad was not not not heavenly"
+21,food,The coffee was,stale,negative,3,False,False,False,positive,"Honestly, the coffee was not not not stale"
+22,food,The sauce was,fresh,positive,3,False,False,False,negative,"Let us be clear, the sauce was not not not fresh"
+23,food,The pizza was,tender,positive,3,False,False,False,negative,I would argue the pizza was not not not tender
+24,food,The meal was,bland,negative,3,False,False,False,positive,"That said, the meal was not not not bland"
+25,food,The wine was,tasteless,negative,3,False,False,False,positive,"Looking at it carefully, the wine was not not not tasteless"
+26,food,The appetizer was,stale,negative,3,False,False,False,positive,"Compared to what I expected, the appetizer was not not not stale"
+27,food,The portion was,undercooked,negative,3,False,False,False,positive,"Without a doubt, the portion was not not not undercooked"
+28,food,The flavor was,perfectly seasoned,positive,3,False,False,False,negative,"Overall, the flavor was not not not perfectly seasoned"
+29,people,The teacher was,incompetent,negative,3,False,False,False,positive,"No matter how you look at it, the teacher was not not not incompetent"
+30,people,The doctor was,welcoming,positive,3,False,False,False,negative,"To put it mildly, the doctor was not not not welcoming"
+31,people,The colleague was,caring,positive,3,False,False,False,negative,"All things considered, the colleague was not not not caring"
+32,people,The manager was,arrogant,negative,3,False,False,False,positive,The manager was not not not arrogant
+33,people,The guide was,dismissive,negative,3,False,False,False,positive,I think the guide was not not not dismissive
+34,people,The host was,supportive,positive,3,False,False,False,negative,"Looking at it carefully, the host was not not not supportive"
+35,people,The performer was,welcoming,positive,3,False,False,False,negative,There is no denying that the performer was not not not welcoming
+36,people,The speaker was,incompetent,negative,3,False,False,False,positive,"To my surprise, the speaker was not not not incompetent"
+37,people,The coach was,talented,positive,3,False,False,False,negative,"All things considered, the coach was not not not talented"
+38,people,The chef was,supportive,positive,3,False,False,False,negative,"If I am honest, the chef was not not not supportive"
+39,people,The waiter was,unprofessional,negative,3,False,False,False,positive,"In the end, the waiter was not not not unprofessional"
+40,people,The receptionist was,talented,positive,3,False,False,False,negative,"To my surprise, the receptionist was not not not talented"
+41,people,The instructor was,engaging,positive,3,False,False,False,negative,"Undeniably, the instructor was not not not engaging"
+42,people,The assistant was,inspiring,positive,3,False,False,False,negative,"Clearly, the assistant was not not not inspiring"
+43,places,The beach was,charming,positive,3,False,False,False,negative,People kept saying the beach was not not not charming
+44,places,The park was,overcrowded,negative,3,False,False,False,positive,"Undeniably, the park was not not not overcrowded"
+45,places,The museum was,cozy,positive,3,False,False,False,negative,"Much to my surprise, the museum was not not not cozy"
+46,places,The restaurant was,breathtaking,positive,3,False,False,False,negative,"Much to my surprise, the restaurant was not not not breathtaking"
+47,places,The hotel was,chaotic,negative,3,False,False,False,positive,"To say the least, the hotel was not not not chaotic"
+48,places,The city was,unsafe,negative,3,False,False,False,positive,"Looking back, the city was not not not unsafe"
+49,places,The garden was,noisy,negative,3,False,False,False,positive,"Frankly, the garden was not not not noisy"
+50,places,The view was,overcrowded,negative,3,False,False,False,positive,"At best, the view was not not not overcrowded"
+51,places,The village was,overpriced,negative,3,False,False,False,positive,"Compared to what I expected, the village was not not not overpriced"
+52,places,The market was,cozy,positive,3,False,False,False,negative,I have to say the market was not not not cozy
+53,places,The neighborhood was,peaceful,positive,3,False,False,False,negative,People kept saying the neighborhood was not not not peaceful
+54,places,The atmosphere was,beautiful,positive,3,False,False,False,negative,"Clearly, the atmosphere was not not not beautiful"
+55,places,The venue was,overcrowded,negative,3,False,False,False,positive,"Let us be clear, the venue was not not not overcrowded"
+56,places,The landscape was,dirty,negative,3,False,False,False,positive,"From the start, the landscape was not not not dirty"
+57,products,The laptop was,overpriced,negative,3,False,False,False,positive,"Even so, the laptop was not not not overpriced"
+58,products,The phone was,intuitive,positive,3,False,False,False,negative,"If anything, the phone was not not not intuitive"
+59,products,The camera was,fragile,negative,3,False,False,False,positive,Everyone agreed that the camera was not not not fragile
+60,products,The headphones were,responsive,positive,3,False,False,False,negative,"Make no mistake, the headphones were not not not responsive"
+61,products,The keyboard was,broken,negative,3,False,False,False,positive,I would argue the keyboard was not not not broken
+62,products,The watch was,slow,negative,3,False,False,False,positive,"Admittedly, the watch was not not not slow"
+63,products,The bag was,durable,positive,3,False,False,False,negative,"Frankly, the bag was not not not durable"
+64,products,The software was,sturdy,positive,3,False,False,False,negative,Who would have thought that the software was not not not sturdy
+65,products,The chair was,broken,negative,3,False,False,False,positive,"Overall, the chair was not not not broken"
+66,products,The blender was,sturdy,positive,3,False,False,False,negative,"From the start, the blender was not not not sturdy"
+67,products,The battery was,precise,positive,3,False,False,False,negative,"Clearly, the battery was not not not precise"
+68,products,The screen was,overpriced,negative,3,False,False,False,positive,"Overall, the screen was not not not overpriced"
+69,products,The design was,flimsy,negative,3,False,False,False,positive,"Undeniably, the design was not not not flimsy"
+70,products,The packaging was,sturdy,positive,3,False,False,False,negative,People kept saying the packaging was not not not sturdy
