@@ -1,0 +1,20 @@
+Model: siebert/sentiment-roberta-large-english | Device: cuda
+Running 9 experiments:
+  ('LIME', 'aux_not', 'sentence_not_0_aux')
+  ('LIME', 'aux_not', 'sentence_not_1_aux')
+  ('LIME', 'not_start', 'sentence_not_beginning')
+  ('LIME', 'base', 'sentence_not_3')
+  ('LIME', 'base', 'sentence_not_2')
+  ('LIME', 'base', 'sentence_not_1')
+  ('LIME', 'base', 'sentence_not_0')
+  ('LIME', 'contraction', 'sentence_not_1_contraction')
+  ('LIME', 'contraction', 'sentence_not_2_contraction')
+  Saved: /home/papadopu/xai-nlp/results/siebert/sentiment-roberta-large-english/LIME/aux_not/sentence_not_0_aux.pkl
+  Saved: /home/papadopu/xai-nlp/results/siebert/sentiment-roberta-large-english/LIME/aux_not/sentence_not_1_aux.pkl
+  Saved: /home/papadopu/xai-nlp/results/siebert/sentiment-roberta-large-english/LIME/not_start/sentence_not_beginning.pkl
+  Saved: /home/papadopu/xai-nlp/results/siebert/sentiment-roberta-large-english/LIME/base/sentence_not_3.pkl
+  Saved: /home/papadopu/xai-nlp/results/siebert/sentiment-roberta-large-english/LIME/base/sentence_not_2.pkl
+  Saved: /home/papadopu/xai-nlp/results/siebert/sentiment-roberta-large-english/LIME/base/sentence_not_1.pkl
+  Saved: /home/papadopu/xai-nlp/results/siebert/sentiment-roberta-large-english/LIME/base/sentence_not_0.pkl
+  Saved: /home/papadopu/xai-nlp/results/siebert/sentiment-roberta-large-english/LIME/contraction/sentence_not_1_contraction.pkl
+  Saved: /home/papadopu/xai-nlp/results/siebert/sentiment-roberta-large-english/LIME/contraction/sentence_not_2_contraction.pkl
