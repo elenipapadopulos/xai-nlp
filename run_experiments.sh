@@ -1,11 +1,12 @@
 #!/bin/bash
 
-for METHOD in Occlusion Shap LIME; do
-    sbatch <<EOF
+for MODEL in distilbert roberta; do
+    for METHOD in Occlusion Shap LIME; do
+        sbatch <<EOF
 #!/bin/bash
-#SBATCH --job-name=xai_${METHOD}
-#SBATCH --output=logs/output/${METHOD}.log
-#SBATCH --error=logs/error/${METHOD}.log
+#SBATCH --job-name=xai_${MODEL}_${METHOD}
+#SBATCH --output=logs/output/${MODEL}_${METHOD}.log
+#SBATCH --error=logs/error/${MODEL}_${METHOD}.log
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --partition=owner1
@@ -14,8 +15,7 @@ for METHOD in Occlusion Shap LIME; do
 #SBATCH --time=23:00:00
 #SBATCH --mem=24G
 
-# python -c "from transformers import AutoModelForSequenceClassification, AutoTokenizer; AutoTokenizer.from_pretrained('siebert/sentiment-roberta-large-english'); AutoModelForSequenceClassification.from_pretrained('siebert/sentiment-roberta-large-english')"
-
-python run_experiments.py --method ${METHOD} --model roberta
+python run_experiments.py --method ${METHOD} --model ${MODEL}
 EOF
+    done
 done
