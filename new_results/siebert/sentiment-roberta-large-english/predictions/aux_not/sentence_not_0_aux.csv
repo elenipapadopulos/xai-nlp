@@ -1,0 +1,71 @@
+sentence,label,prediction,prob_neg,prob_pos
+Everyone could not tell that the movie was unforgettable,positive,positive,0.0022691556,0.9977309
+I would not go back: the film was overlong,negative,negative,0.99950314,0.0004968674
+I could not wait to leave because the plot was confusing,negative,negative,0.9994997,0.00050034875
+I will not forget that the acting was masterful,positive,positive,0.0014683979,0.9985316
+I could not help but notice that the ending was gripping,positive,positive,0.0011893865,0.99881065
+I could not stop thinking about how the soundtrack was gripping,positive,positive,0.0012268019,0.99877316
+I could not stop thinking about how the script was captivating,positive,positive,0.001331365,0.9986687
+I could not believe that the cinematography was compelling,positive,negative,0.9994837,0.0005163114
+I will not forget that the cast was thought-provoking,positive,positive,0.0016398528,0.9983601
+I would not go back: the direction was unforgettable,positive,positive,0.0014295527,0.99857044
+Everyone could not tell that the dialogue was overlong,negative,negative,0.9994617,0.00053829723
+I will not forget that the pacing was brilliant,positive,positive,0.0017706562,0.9982293
+It was not obvious that the visual effects were confusing,negative,negative,0.9989674,0.0010325989
+I would not go back: the story was disappointing,negative,negative,0.99950516,0.00049486593
+Nobody could not see that the pasta was disappointing,negative,negative,0.9995053,0.0004947558
+You could not deny that the soup was bland,negative,negative,0.99944896,0.00055101275
+I could not wait to leave because the bread was cold,negative,positive,0.0036552486,0.99634475
+I could not wait to leave because the dessert was fresh,positive,positive,0.0013373914,0.9986626
+I would not go back: the steak was salty,negative,negative,0.99950397,0.0004959697
+I could not stop thinking about how the salad was heavenly,positive,positive,0.001312609,0.99868745
+I could not stop thinking about how the coffee was stale,negative,negative,0.9993106,0.0006894108
+It was not obvious that the sauce was fresh,positive,negative,0.9982072,0.0017927848
+Nobody could not see that the pizza was tender,positive,negative,0.9994973,0.00050266815
+I could not wait to leave because the meal was bland,negative,negative,0.9994993,0.0005006278
+It was not obvious that the wine was tasteless,negative,negative,0.9993599,0.0006401104
+I could not stop thinking about how the appetizer was stale,negative,negative,0.99946696,0.0005331092
+I will not forget that the portion was undercooked,negative,negative,0.99824834,0.0017517154
+Everyone could not tell that the flavor was perfectly seasoned,positive,negative,0.9299034,0.07009669
+I will not forget that the teacher was incompetent,negative,negative,0.9991473,0.00085269584
+It was not obvious that the doctor was welcoming,positive,negative,0.9994259,0.00057414285
+You could not deny that the colleague was caring,positive,positive,0.0015795858,0.9984205
+I could not stop thinking about how the manager was arrogant,negative,negative,0.9992957,0.00070422
+It was not clear to me that the guide was dismissive,negative,negative,0.9994746,0.00052542886
+Nobody could not see that the host was supportive,positive,negative,0.9964516,0.0035483523
+I could not help but notice that the performer was welcoming,positive,positive,0.0014684029,0.9985316
+I could not wait to leave because the speaker was incompetent,negative,negative,0.99950194,0.00049809227
+I could not believe that the coach was talented,positive,negative,0.99939513,0.0006048999
+I will not forget that the chef was supportive,positive,positive,0.0017379583,0.9982621
+You could not deny that the waiter was unprofessional,negative,negative,0.99948585,0.0005140858
+I would not say that the receptionist was talented,positive,negative,0.99857795,0.0014220121
+I could not help but notice that the instructor was engaging,positive,positive,0.0011690848,0.998831
+I could not believe that the assistant was inspiring,positive,negative,0.9994166,0.00058338797
+I could not stop thinking about how the beach was charming,positive,positive,0.0014028817,0.9985971
+I would not say that the park was overcrowded,negative,positive,0.008439409,0.99156064
+I would not go back: the museum was cozy,positive,negative,0.99946886,0.00053114124
+I would not go back: the restaurant was breathtaking,positive,negative,0.9994154,0.0005846277
+You could not deny that the hotel was chaotic,negative,negative,0.99944156,0.00055837317
+I would not go back: the city was unsafe,negative,negative,0.99949193,0.00050802424
+I would not say that the garden was noisy,negative,positive,0.00609316,0.9939069
+I would not say that the view was overcrowded,negative,positive,0.008194488,0.99180555
+Nobody could not see that the village was overpriced,negative,negative,0.9994935,0.00050645607
+I could not help but notice that the market was cozy,positive,positive,0.0012581145,0.9987419
+I could not wait to leave because the neighborhood was peaceful,positive,positive,0.0015200916,0.9984799
+I will not forget that the atmosphere was beautiful,positive,positive,0.0013648272,0.9986351
+It was not clear to me that the venue was overcrowded,negative,negative,0.9980836,0.0019163878
+It was not obvious that the landscape was dirty,negative,negative,0.99735934,0.002640688
+I would not go back: the laptop was overpriced,negative,negative,0.99950016,0.0004998837
+You could not deny that the phone was intuitive,positive,positive,0.0012805222,0.99871945
+I would not go back: the camera was fragile,negative,negative,0.99949634,0.000503647
+It was not obvious that the headphones were responsive,positive,negative,0.99933463,0.00066538394
+I could not help but notice that the keyboard was broken,negative,negative,0.99939036,0.000609632
+Everyone could not tell that the watch was slow,negative,negative,0.9985216,0.0014783554
+Nobody could not see that the bag was durable,positive,negative,0.9994804,0.00051965273
+I would not say that the software was sturdy,positive,negative,0.9991811,0.000818876
+Nobody could not see that the chair was broken,negative,negative,0.999496,0.0005039801
+I could not stop thinking about how the blender was sturdy,positive,positive,0.0026258745,0.9973742
+I will not forget that the battery was precise,positive,positive,0.0018901601,0.9981098
+I would not go back: the screen was overpriced,negative,negative,0.99950266,0.00049727433
+I could not wait to leave because the design was flimsy,negative,negative,0.9995004,0.00049956003
+Everyone could not tell that the packaging was sturdy,positive,negative,0.99871683,0.0012832358

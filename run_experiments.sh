@@ -15,7 +15,10 @@ for MODEL in distilbert roberta; do
 #SBATCH --time=23:00:00
 #SBATCH --mem=24G
 
+echo "Job started: \$(date)"
 python run_experiments.py --method ${METHOD} --model ${MODEL}
+echo "Job ended: \$(date)"
+
 EOF
     done
 done

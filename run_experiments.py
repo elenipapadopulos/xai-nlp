@@ -51,12 +51,12 @@ MODELS = {
     "roberta":    "siebert/sentiment-roberta-large-english",
 }
 
-# base experiments still to be done — all other base combinations are excluded
-BASE_TODO = {
-    ("LIME",      "base", "sentence_not_3"),
-    ("Occlusion", "base", "sentence_not_2"),
-    ("Shap",      "base", "sentence_not_2"),
-}
+# # base experiments still to be done — all other base combinations are excluded
+# BASE_TODO = {
+#     ("LIME",      "base", "sentence_not_3"),
+#     ("Occlusion", "base", "sentence_not_2"),
+#     ("Shap",      "base", "sentence_not_2"),
+# }
 
 # ── Utils ──────────────────────────────────────────────────────────────────────
 
@@ -149,7 +149,7 @@ def main():
                         help="Run all folders for this method (excludes base if already done)")
     parser.add_argument("--folder", default=None,
                         help="Run all methods for this folder (excludes base, excludes IG)")
-    parser.add_argument("--project_root", default="/content/drive/MyDrive/BSC/Not_in_Text_Explanations")
+    parser.add_argument("--project_root", default="/home/papadopu/xai-nlp")
     args = parser.parse_args()
 
     if args.method is None and args.folder is None:
@@ -157,7 +157,8 @@ def main():
         sys.exit(1)
 
     PROJECT_ROOT = Path(args.project_root)
-    RESULTS_ROOT = PROJECT_ROOT / "results" / MODELS[args.model]
+    RESULTS_ROOT = PROJECT_ROOT / "new_results" / MODELS[args.model]
+    RESULTS_ROOT.mkdir(parents=True, exist_ok=True)
 
     # Load datasets
     datasets = defaultdict(dict)
@@ -177,8 +178,8 @@ def main():
 
     # Build experiment list
     def include(method, folder, filename):
-        if folder == "base":
-            return (method, folder, filename) in BASE_TODO  # only the 3 exceptions
+        # if folder == "base":
+        #     return (method, folder, filename) in BASE_TODO  # only the 3 exceptions
         return True
 
     if args.method:
@@ -204,18 +205,28 @@ def main():
     perf_records = []
     perf_csv     = RESULTS_ROOT / "performance.csv"
 
-    def compute_accuracy(df, sentences):
+    def compute_accuracy(df, sentences, folder, filename):
         labels      = df["label"].tolist()
         probs       = predict_fn(tokenizer, model, list(sentences))
         predictions = ["positive" if np.argmax(p) == 1 else "negative" for p in probs]
 
-        correct     = [p == l for p, l in zip(predictions, labels)]
-        acc         = sum(correct) / len(correct)
+        # save predictions
+        pred_dir = RESULTS_ROOT / "predictions" / folder
+        pred_dir.mkdir(parents=True, exist_ok=True)
+        pd.DataFrame({
+            "sentence":   list(sentences),
+            "label":      labels,
+            "prediction": predictions,
+            "prob_neg":   [p[0] for p in probs],
+            "prob_pos":   [p[1] for p in probs],
+        }).to_csv(pred_dir / f"{filename}.csv", index=False)
 
-        pos_mask    = [l == "positive" for l in labels]
-        neg_mask    = [l == "negative" for l in labels]
-        acc_pos     = sum(c for c, m in zip(correct, pos_mask) if m) / sum(pos_mask) if sum(pos_mask) > 0 else None
-        acc_neg     = sum(c for c, m in zip(correct, neg_mask) if m) / sum(neg_mask) if sum(neg_mask) > 0 else None
+        correct  = [p == l for p, l in zip(predictions, labels)]
+        acc      = sum(correct) / len(correct)
+        pos_mask = [l == "positive" for l in labels]
+        neg_mask = [l == "negative" for l in labels]
+        acc_pos  = sum(c for c, m in zip(correct, pos_mask) if m) / sum(pos_mask) if sum(pos_mask) > 0 else None
+        acc_neg  = sum(c for c, m in zip(correct, neg_mask) if m) / sum(neg_mask) if sum(neg_mask) > 0 else None
 
         return acc, acc_pos, acc_neg
 
@@ -237,7 +248,7 @@ def main():
         # Compute accuracy once per (folder, filename) regardless of method
         if (folder, filename) not in seen_datasets:
             seen_datasets.add((folder, filename))
-            acc, acc_pos, acc_neg = compute_accuracy(df, sentences)
+            acc, acc_pos, acc_neg = compute_accuracy(df, sentences, folder, filename)
             perf_records.append({
                 "model":    model_name,
                 "folder":   folder,
