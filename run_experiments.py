@@ -109,7 +109,7 @@ def lime_explanation(tokenizer, model, instance):
     exp = explainer.explain_instance(
         instance, _predict,
         num_features=1000,
-        num_samples=1000,
+        num_samples=2000,
     )
     exp_map           = exp.as_map()
     pairs             = exp_map[1]
@@ -149,7 +149,7 @@ def main():
                         help="Run all folders for this method (excludes base if already done)")
     parser.add_argument("--folder", default=None,
                         help="Run all methods for this folder (excludes base, excludes IG)")
-    parser.add_argument("--project_root", default="/home/papadopu/xai-nlp")
+    parser.add_argument("--project_root", default="/content/drive/MyDrive/BSC/Not_in_Text_Explanations")
     args = parser.parse_args()
 
     if args.method is None and args.folder is None:
@@ -172,12 +172,13 @@ def main():
     tokenizer  = AutoTokenizer.from_pretrained(model_name)
     model      = AutoModelForSequenceClassification.from_pretrained(model_name).to(device)
     model.eval()
-    print(f"Model: {model_name} | Device: {device}")
+    print(f"Model : {model_name}")
+    print(f"Device: {device}")
 
     # Build experiment list
     def include(method, folder, filename):
-        # if folder == "base":
-        #    return (method, folder, filename) in BASE_TODO  # only the 3 exceptions
+        if folder == "base":
+            return (method, folder, filename) in BASE_TODO  # only the 3 exceptions
         return True
 
     if args.method:
@@ -199,7 +200,27 @@ def main():
     for e in experiments:
         print(f"  {e}")
 
+    # Performance tracking
+    perf_records = []
+    perf_csv     = RESULTS_ROOT / "performance.csv"
+
+    def compute_accuracy(df, sentences):
+        labels      = df["label"].tolist()
+        probs       = predict_fn(tokenizer, model, list(sentences))
+        predictions = ["positive" if np.argmax(p) == 1 else "negative" for p in probs]
+
+        correct     = [p == l for p, l in zip(predictions, labels)]
+        acc         = sum(correct) / len(correct)
+
+        pos_mask    = [l == "positive" for l in labels]
+        neg_mask    = [l == "negative" for l in labels]
+        acc_pos     = sum(c for c, m in zip(correct, pos_mask) if m) / sum(pos_mask) if sum(pos_mask) > 0 else None
+        acc_neg     = sum(c for c, m in zip(correct, neg_mask) if m) / sum(neg_mask) if sum(neg_mask) > 0 else None
+
+        return acc, acc_pos, acc_neg
+
     # Run
+    seen_datasets = set()  # avoid computing accuracy multiple times for same dataset
     for method, folder, filename in tqdm(experiments, desc="experiments"):
         df        = datasets[folder][filename]
         sentences = df["sentence"]
@@ -212,6 +233,31 @@ def main():
             pickle.dump(distrib, f)
 
         print(f"  Saved: {save_dir / filename}.pkl")
+
+        # Compute accuracy once per (folder, filename) regardless of method
+        if (folder, filename) not in seen_datasets:
+            seen_datasets.add((folder, filename))
+            acc, acc_pos, acc_neg = compute_accuracy(df, sentences)
+            perf_records.append({
+                "model":    model_name,
+                "folder":   folder,
+                "dataset":  filename,
+                "accuracy": acc,
+                "acc_pos":  acc_pos,
+                "acc_neg":  acc_neg,
+            })
+            print(f"  Accuracy: {acc:.3f} | pos: {acc_pos:.3f} | neg: {acc_neg:.3f}")
+
+    # Save performance CSV (append if exists)
+    if perf_records:
+        df_perf = pd.DataFrame(perf_records)
+        if perf_csv.exists():
+            df_existing = pd.read_csv(perf_csv)
+            df_perf     = pd.concat([df_existing, df_perf], ignore_index=True).drop_duplicates(
+                subset=["model", "folder", "dataset"]
+            )
+        df_perf.to_csv(perf_csv, index=False)
+        print(f"\nPerformance saved to {perf_csv}")
 
 
 if __name__ == "__main__":
