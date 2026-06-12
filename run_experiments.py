@@ -183,20 +183,16 @@ def main():
         #     return (method, folder, filename) in BASE_TODO  # only the 3 exceptions
         return True
 
-    if args.method:
-        experiments = [
-            (args.method, folder, filename)
-            for folder, configs in datasets.items()
-            for filename in configs
-            if include(args.method, folder, filename)
-        ]
-    else:
-        experiments = [
-            (method, args.folder, filename)
-            for method in ["Occlusion", "Shap", "LIME"]
-            for filename in datasets.get(args.folder, {})
-            if include(method, args.folder, filename)
-        ]
+    methods = [args.method] if args.method else ["Occlusion", "Shap", "LIME"]
+    folders = [args.folder] if args.folder else list(datasets.keys())
+
+    experiments = [
+        (method, folder, filename)
+        for method in methods
+        for folder in folders
+        for filename in datasets.get(folder, {})
+        if include(method, folder, filename)
+    ]
 
     print(f"Running {len(experiments)} experiments:")
     for e in experiments:

@@ -1,7 +1,7 @@
 #!/bin/bash
 
-for MODEL in roberta-sst2; do
-    for METHOD in Occlusion Shap LIME; do
+for MODEL in roberta; do
+    for METHOD in LIME; do
         sbatch <<EOF
 #!/bin/bash
 #SBATCH --job-name=xai_${MODEL}_${METHOD}
@@ -18,7 +18,7 @@ for MODEL in roberta-sst2; do
 mkdir -p logs/error/${MODEL} logs/output/${MODEL}
 
 echo "Job started: \$(date)"
-python run_experiments.py --method ${METHOD} --model ${MODEL}
+python run_experiments.py --method ${METHOD} --model ${MODEL} --folder contraction
 echo "Job ended: \$(date)"
 
 EOF
