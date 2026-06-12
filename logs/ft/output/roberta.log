@@ -1,0 +1,91 @@
+Job started: Thu Jun 11 01:36:18 PM UTC 2026
+
+============================================================
+  Fine-tuning roberta-large  →  SST2
+============================================================
+  Device : cuda  |  GPUs available: 1
+  Loading dataset 'glue' …
+  train: 67,349   val: 872
+  [sst2] Epoch 1 | step 100/2105 | loss 0.7194 | 40s
+  [sst2] Epoch 1 | step 200/2105 | loss 0.5603 | 72s
+  [sst2] Epoch 1 | step 300/2105 | loss 0.4693 | 104s
+  [sst2] Epoch 1 | step 400/2105 | loss 0.4160 | 136s
+  [sst2] Epoch 1 | step 500/2105 | loss 0.3806 | 169s
+  [sst2] Epoch 1 | step 600/2105 | loss 0.3530 | 202s
+  [sst2] Epoch 1 | step 700/2105 | loss 0.3366 | 234s
+  [sst2] Epoch 1 | step 800/2105 | loss 0.3227 | 267s
+  [sst2] Epoch 1 | step 900/2105 | loss 0.3110 | 299s
+  [sst2] Epoch 1 | step 1000/2105 | loss 0.2995 | 332s
+  [sst2] Epoch 1 | step 1100/2105 | loss 0.2910 | 364s
+  [sst2] Epoch 1 | step 1200/2105 | loss 0.2825 | 397s
+  [sst2] Epoch 1 | step 1300/2105 | loss 0.2769 | 429s
+  [sst2] Epoch 1 | step 1400/2105 | loss 0.2695 | 462s
+  [sst2] Epoch 1 | step 1500/2105 | loss 0.2648 | 494s
+  [sst2] Epoch 1 | step 1600/2105 | loss 0.2595 | 527s
+  [sst2] Epoch 1 | step 1700/2105 | loss 0.2539 | 559s
+  [sst2] Epoch 1 | step 1800/2105 | loss 0.2505 | 592s
+  [sst2] Epoch 1 | step 1900/2105 | loss 0.2472 | 624s
+  [sst2] Epoch 1 | step 2000/2105 | loss 0.2438 | 657s
+  [sst2] Epoch 1 | step 2100/2105 | loss 0.2404 | 689s
+  [sst2] Epoch 1 | step 2105/2105 | loss 0.2401 | 691s
+
+  [sst2] Epoch 1/3  train_loss=0.2401  val_acc=0.9507  time=694s
+
+  [sst2] Epoch 2 | step 100/2105 | loss 0.1236 | 33s
+  [sst2] Epoch 2 | step 200/2105 | loss 0.1353 | 65s
+  [sst2] Epoch 2 | step 300/2105 | loss 0.1390 | 97s
+  [sst2] Epoch 2 | step 400/2105 | loss 0.1366 | 130s
+  [sst2] Epoch 2 | step 500/2105 | loss 0.1354 | 163s
+  [sst2] Epoch 2 | step 600/2105 | loss 0.1348 | 195s
+  [sst2] Epoch 2 | step 700/2105 | loss 0.1325 | 228s
+  [sst2] Epoch 2 | step 800/2105 | loss 0.1358 | 260s
+  [sst2] Epoch 2 | step 900/2105 | loss 0.1358 | 293s
+  [sst2] Epoch 2 | step 1000/2105 | loss 0.1362 | 325s
+  [sst2] Epoch 2 | step 1100/2105 | loss 0.1352 | 358s
+  [sst2] Epoch 2 | step 1200/2105 | loss 0.1336 | 390s
+  [sst2] Epoch 2 | step 1300/2105 | loss 0.1345 | 423s
+  [sst2] Epoch 2 | step 1400/2105 | loss 0.1337 | 455s
+  [sst2] Epoch 2 | step 1500/2105 | loss 0.1329 | 488s
+  [sst2] Epoch 2 | step 1600/2105 | loss 0.1324 | 521s
+  [sst2] Epoch 2 | step 1700/2105 | loss 0.1324 | 553s
+  [sst2] Epoch 2 | step 1800/2105 | loss 0.1316 | 586s
+  [sst2] Epoch 2 | step 1900/2105 | loss 0.1318 | 618s
+  [sst2] Epoch 2 | step 2000/2105 | loss 0.1312 | 651s
+  [sst2] Epoch 2 | step 2100/2105 | loss 0.1307 | 683s
+  [sst2] Epoch 2 | step 2105/2105 | loss 0.1306 | 685s
+
+  [sst2] Epoch 2/3  train_loss=0.1306  val_acc=0.9484  time=688s
+
+  [sst2] Epoch 3 | step 100/2105 | loss 0.0936 | 33s
+  [sst2] Epoch 3 | step 200/2105 | loss 0.0847 | 66s
+  [sst2] Epoch 3 | step 300/2105 | loss 0.0872 | 98s
+  [sst2] Epoch 3 | step 400/2105 | loss 0.0859 | 131s
+  [sst2] Epoch 3 | step 500/2105 | loss 0.0864 | 164s
+  [sst2] Epoch 3 | step 600/2105 | loss 0.0875 | 196s
+  [sst2] Epoch 3 | step 700/2105 | loss 0.0879 | 229s
+  [sst2] Epoch 3 | step 800/2105 | loss 0.0903 | 262s
+  [sst2] Epoch 3 | step 900/2105 | loss 0.0908 | 294s
+  [sst2] Epoch 3 | step 1000/2105 | loss 0.0909 | 327s
+  [sst2] Epoch 3 | step 1100/2105 | loss 0.0913 | 359s
+  [sst2] Epoch 3 | step 1200/2105 | loss 0.0919 | 392s
+  [sst2] Epoch 3 | step 1300/2105 | loss 0.0911 | 425s
+  [sst2] Epoch 3 | step 1400/2105 | loss 0.0905 | 457s
+  [sst2] Epoch 3 | step 1500/2105 | loss 0.0894 | 490s
+  [sst2] Epoch 3 | step 1600/2105 | loss 0.0886 | 522s
+  [sst2] Epoch 3 | step 1700/2105 | loss 0.0891 | 555s
+  [sst2] Epoch 3 | step 1800/2105 | loss 0.0890 | 587s
+  [sst2] Epoch 3 | step 1900/2105 | loss 0.0886 | 620s
+  [sst2] Epoch 3 | step 2000/2105 | loss 0.0883 | 652s
+  [sst2] Epoch 3 | step 2100/2105 | loss 0.0886 | 685s
+  [sst2] Epoch 3 | step 2105/2105 | loss 0.0887 | 686s
+
+  [sst2] Epoch 3/3  train_loss=0.0887  val_acc=0.9633  time=690s
+
+  Model saved → ./roberta-large-sst2
+
+
+============================================================
+  SUMMARY
+============================================================
+  SST2    best val_acc=0.9633  (epoch 3)  →  ./roberta-large-sst2
+Job ended: Thu Jun 11 02:12:40 PM UTC 2026

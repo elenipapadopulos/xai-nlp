@@ -11,3 +11,20 @@ Running 9 experiments:
   ('LIME', 'base', 'sentence_not_0')
   ('LIME', 'contraction', 'sentence_not_1_contraction')
   ('LIME', 'contraction', 'sentence_not_2_contraction')
+<<<<<<< HEAD
+=======
+  Saved: /home/papadopu/xai-nlp/new_results/siebert/sentiment-roberta-large-english/LIME/aux_not/sentence_not_0_aux.pkl
+  Accuracy: 0.729 | pos: 0.583 | neg: 0.882
+  Saved: /home/papadopu/xai-nlp/new_results/siebert/sentiment-roberta-large-english/LIME/aux_not/sentence_not_1_aux.pkl
+  Accuracy: 0.671 | pos: 0.382 | neg: 0.944
+  Saved: /home/papadopu/xai-nlp/new_results/siebert/sentiment-roberta-large-english/LIME/not_start/sentence_not_beginning.pkl
+  Accuracy: 0.129 | pos: 0.000 | neg: 0.265
+  Saved: /home/papadopu/xai-nlp/new_results/siebert/sentiment-roberta-large-english/LIME/base/sentence_not_3.pkl
+  Accuracy: 0.871 | pos: 0.735 | neg: 1.000
+  Saved: /home/papadopu/xai-nlp/new_results/siebert/sentiment-roberta-large-english/LIME/base/sentence_not_2.pkl
+  Accuracy: 0.029 | pos: 0.000 | neg: 0.059
+  Saved: /home/papadopu/xai-nlp/new_results/siebert/sentiment-roberta-large-english/LIME/base/sentence_not_1.pkl
+  Accuracy: 0.986 | pos: 0.971 | neg: 1.000
+  Saved: /home/papadopu/xai-nlp/new_results/siebert/sentiment-roberta-large-english/LIME/base/sentence_not_0.pkl
+  Accuracy: 0.986 | pos: 0.972 | neg: 1.000
+>>>>>>> e26191c78999f13f30716d133289cbc36b86b8ac
