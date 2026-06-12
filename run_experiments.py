@@ -49,6 +49,7 @@ np.random.seed(42)
 MODELS = {
     "distilbert": "distilbert-base-uncased-finetuned-sst-2-english",
     "roberta":    "siebert/sentiment-roberta-large-english",
+    "roberta-sst2": "roberta-large-sst2"
 }
 
 # # base experiments still to be done — all other base combinations are excluded
@@ -143,7 +144,7 @@ def get_token_attribution_distribution(model, tokenizer, dataset, method):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--model",  choices=["distilbert", "roberta"], default="distilbert")
+    parser.add_argument("--model",  choices=["distilbert", "roberta", "roberta-sst2"], default="distilbert")
     parser.add_argument("--method", choices=["Occlusion", "Shap", "LIME"], default=None,
                         # IG excluded
                         help="Run all folders for this method (excludes base if already done)")

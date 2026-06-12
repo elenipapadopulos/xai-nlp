@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for MODEL in distilbert roberta; do
+for MODEL in roberta-sst2; do
     for METHOD in Occlusion Shap LIME; do
         sbatch <<EOF
 #!/bin/bash
@@ -14,6 +14,8 @@ for MODEL in distilbert roberta; do
 #SBATCH --cpus-per-task=4
 #SBATCH --time=23:00:00
 #SBATCH --mem=24G
+
+mkdir -p logs/error/${MODEL} logs/output/${MODEL}
 
 echo "Job started: \$(date)"
 python run_experiments.py --method ${METHOD} --model ${MODEL}

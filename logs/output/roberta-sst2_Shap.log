@@ -1,0 +1,34 @@
+Job started: Thu Jun 11 02:58:51 PM UTC 2026
+Model : roberta-large-sst2
+Device: cpu
+Running 9 experiments:
+  ('Shap', 'aux_not', 'sentence_not_0_aux')
+  ('Shap', 'aux_not', 'sentence_not_1_aux')
+  ('Shap', 'not_start', 'sentence_not_beginning')
+  ('Shap', 'base', 'sentence_not_3')
+  ('Shap', 'base', 'sentence_not_2')
+  ('Shap', 'base', 'sentence_not_1')
+  ('Shap', 'base', 'sentence_not_0')
+  ('Shap', 'contraction', 'sentence_not_1_contraction')
+  ('Shap', 'contraction', 'sentence_not_2_contraction')
+  Saved: /home/papadopu/xai-nlp/new_results/roberta-large-sst2/Shap/aux_not/sentence_not_0_aux.pkl
+  Accuracy: 0.814 | pos: 0.694 | neg: 0.941
+  Saved: /home/papadopu/xai-nlp/new_results/roberta-large-sst2/Shap/aux_not/sentence_not_1_aux.pkl
+  Accuracy: 0.729 | pos: 0.529 | neg: 0.917
+  Saved: /home/papadopu/xai-nlp/new_results/roberta-large-sst2/Shap/not_start/sentence_not_beginning.pkl
+  Accuracy: 0.100 | pos: 0.028 | neg: 0.176
+  Saved: /home/papadopu/xai-nlp/new_results/roberta-large-sst2/Shap/base/sentence_not_3.pkl
+  Accuracy: 0.400 | pos: 0.382 | neg: 0.417
+  Saved: /home/papadopu/xai-nlp/new_results/roberta-large-sst2/Shap/base/sentence_not_2.pkl
+  Accuracy: 0.114 | pos: 0.111 | neg: 0.118
+  Saved: /home/papadopu/xai-nlp/new_results/roberta-large-sst2/Shap/base/sentence_not_1.pkl
+  Accuracy: 0.957 | pos: 0.941 | neg: 0.972
+  Saved: /home/papadopu/xai-nlp/new_results/roberta-large-sst2/Shap/base/sentence_not_0.pkl
+  Accuracy: 1.000 | pos: 1.000 | neg: 1.000
+  Saved: /home/papadopu/xai-nlp/new_results/roberta-large-sst2/Shap/contraction/sentence_not_1_contraction.pkl
+  Accuracy: 0.929 | pos: 0.882 | neg: 0.972
+  Saved: /home/papadopu/xai-nlp/new_results/roberta-large-sst2/Shap/contraction/sentence_not_2_contraction.pkl
+  Accuracy: 0.857 | pos: 0.889 | neg: 0.824
+
+Performance saved to /home/papadopu/xai-nlp/new_results/roberta-large-sst2/performance.csv
+Job ended: Thu Jun 11 03:34:24 PM UTC 2026

@@ -1,0 +1,71 @@
+sentence,label,prediction,prob_neg,prob_pos
+"Even so, the movie was not unforgettable",negative,negative,0.9975424,0.0024576965
+I have to say the film was not overlong,positive,positive,0.0016076075,0.9983924
+"Honestly, the plot was not confusing",positive,positive,0.0037336992,0.9962663
+"All things considered, the acting was not masterful",negative,negative,0.998643,0.0013570518
+"At the end of the day, the ending was not gripping",negative,negative,0.9990355,0.00096455775
+"Overall, the soundtrack was not gripping",negative,negative,0.9990126,0.000987409
+I must admit the script was not captivating,negative,negative,0.9987783,0.0012217136
+"Undeniably, the cinematography was not compelling",negative,negative,0.99891114,0.0010888147
+"Having given it a fair chance, the cast was not thought-provoking",negative,negative,0.99863017,0.0013699151
+"Compared to what I expected, the direction was not unforgettable",negative,negative,0.99803,0.0019699736
+"Clearly, the dialogue was not overlong",positive,positive,0.010344254,0.98965573
+"To put it mildly, the pacing was not brilliant",negative,negative,0.9989219,0.0010781494
+There is no denying that the visual effects were not confusing,positive,positive,0.0002536536,0.9997464
+"Frankly, the story was not disappointing",positive,positive,0.00023051485,0.9997695
+"Honestly, the pasta was not disappointing",positive,positive,0.00031001703,0.99969006
+"Clearly, the soup was not bland",positive,positive,0.00036363755,0.9996363
+"In the end, the bread was not cold",positive,positive,0.001881029,0.99811894
+"Overall, the dessert was not fresh",negative,negative,0.9988739,0.0011260449
+"From my perspective, the steak was not salty",positive,negative,0.9948086,0.005191385
+"To say the least, the salad was not heavenly",negative,negative,0.99856156,0.0014383995
+"Honestly, the coffee was not stale",positive,positive,0.00076984375,0.99923015
+"Let us be clear, the sauce was not fresh",negative,negative,0.9985001,0.001499945
+I would argue the pizza was not tender,negative,negative,0.997964,0.0020360413
+"That said, the meal was not bland",positive,positive,0.00030642972,0.99969363
+"Looking at it carefully, the wine was not tasteless",positive,positive,0.0030963228,0.9969036
+"Compared to what I expected, the appetizer was not stale",positive,positive,0.00036238547,0.9996376
+"Without a doubt, the portion was not undercooked",positive,positive,0.0015418645,0.99845815
+"Overall, the flavor was not perfectly seasoned",negative,negative,0.9985661,0.0014339363
+"No matter how you look at it, the teacher was not incompetent",positive,positive,0.0011687373,0.9988312
+"To put it mildly, the doctor was not welcoming",negative,negative,0.9986966,0.0013033964
+"All things considered, the colleague was not caring",negative,negative,0.99831355,0.0016864642
+The manager was not arrogant,positive,positive,0.0003997773,0.99960023
+I think the guide was not dismissive,positive,positive,0.00078873325,0.9992112
+"Looking at it carefully, the host was not supportive",negative,negative,0.9985285,0.0014714972
+There is no denying that the performer was not welcoming,negative,negative,0.9988009,0.0011991423
+"To my surprise, the speaker was not incompetent",positive,positive,0.0009867244,0.9990133
+"All things considered, the coach was not talented",negative,negative,0.99890363,0.0010964031
+"If I am honest, the chef was not supportive",negative,negative,0.998735,0.0012649735
+"In the end, the waiter was not unprofessional",positive,positive,0.0015703511,0.9984296
+"To my surprise, the receptionist was not talented",negative,negative,0.99800247,0.0019975433
+"Undeniably, the instructor was not engaging",negative,negative,0.99900925,0.0009907405
+"Clearly, the assistant was not inspiring",negative,negative,0.9989766,0.0010233773
+People kept saying the beach was not charming,negative,negative,0.99846125,0.0015387242
+"Undeniably, the park was not overcrowded",positive,positive,0.00068923243,0.99931073
+"Much to my surprise, the museum was not cozy",negative,negative,0.99482477,0.0051752473
+"Much to my surprise, the restaurant was not breathtaking",negative,negative,0.99180365,0.0081962785
+"To say the least, the hotel was not chaotic",positive,positive,0.08717572,0.91282433
+"Looking back, the city was not unsafe",positive,positive,0.0024369538,0.997563
+"Frankly, the garden was not noisy",positive,positive,0.1479827,0.8520173
+"At best, the view was not overcrowded",positive,positive,0.0046840278,0.995316
+"Compared to what I expected, the village was not overpriced",positive,positive,0.0013372487,0.9986627
+I have to say the market was not cozy,negative,negative,0.99867,0.001330075
+People kept saying the neighborhood was not peaceful,negative,negative,0.9976706,0.002329424
+"Clearly, the atmosphere was not beautiful",negative,negative,0.99888426,0.0011157016
+"Let us be clear, the venue was not overcrowded",positive,positive,0.004189829,0.99581015
+"From the start, the landscape was not dirty",positive,positive,0.008630419,0.9913696
+"Even so, the laptop was not overpriced",positive,positive,0.0025778753,0.9974221
+"If anything, the phone was not intuitive",negative,negative,0.99884206,0.0011579716
+Everyone agreed that the camera was not fragile,positive,positive,0.0049848068,0.9950152
+"Make no mistake, the headphones were not responsive",negative,negative,0.9986792,0.0013207411
+I would argue the keyboard was not broken,positive,negative,0.99142504,0.008574964
+"Admittedly, the watch was not slow",positive,positive,0.0074421884,0.99255776
+"Frankly, the bag was not durable",negative,negative,0.9989134,0.0010866156
+Who would have thought that the software was not sturdy,negative,positive,0.015428506,0.98457146
+"Overall, the chair was not broken",positive,positive,0.0037676394,0.99623233
+"From the start, the blender was not sturdy",negative,negative,0.99870825,0.0012916944
+"Clearly, the battery was not precise",negative,negative,0.9985316,0.0014684239
+"Overall, the screen was not overpriced",positive,positive,0.0010345791,0.9989654
+"Undeniably, the design was not flimsy",positive,positive,0.00029952297,0.99970055
+People kept saying the packaging was not sturdy,negative,negative,0.99816626,0.0018337186
