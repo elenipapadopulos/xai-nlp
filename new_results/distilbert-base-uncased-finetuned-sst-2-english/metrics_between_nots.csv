@@ -1,0 +1,45 @@
+comparison,config_a,config_b,pair,method,L1,K,KL
+cross_config,Contraction n=1,Aux n=1,pos -2 vs pos -2,IG,0.9129984473958063,0.626844444913466,4.451136305894961
+within_config,Base  n=2,Base  n=2,first not vs second not,IG,0.7802243550313052,0.5612671895484636,0.860121802750882
+within_config,Base  n=3,Base  n=3,first not vs second not,IG,0.6891121489246818,0.5125202005429509,0.7184321009653057
+within_config,Base  n=3,Base  n=3,first not vs third not,IG,1.094461894139311,0.707368150961654,1.0983396951021462
+within_config,Base  n=3,Base  n=3,second not vs third not,IG,0.5714204821754657,0.444439550930258,0.2665855836574861
+cross_config,Contraction n=1,Not-at-beginning,pos -2 vs pos -2,IG,0.08599709374366193,0.08245178672739784,0.01088152848759856
+within_config,Aux  n=1,Aux  n=1,aux not vs adj not,IG,0.24796046554515128,0.2206092761377978,0.0782960924281827
+cross_config,Base n=1,Contraction n=1,pos -2 vs pos -2,IG,0.24620790088959485,0.21922093746717386,0.07433646775384926
+cross_config,Base n=1,Not-at-beginning,pos -2 vs pos -2,IG,0.26640660783281167,0.23509162646464,0.1411506853148094
+cross_config,Base n=1,Aux n=1,pos -2 vs pos -2,IG,1.1150694086156137,0.7159194626813583,7.077575063455251
+within_config,Contraction  n=2,Contraction  n=2,first not vs second not,IG,0.12192126053697112,0.11491591399213186,0.019840541635321243
+within_config,Base  n=2,Base  n=2,first not vs second not,LIME,0.34756530212419473,0.2961070363492767,0.07655455149531065
+cross_config,Contraction n=1,Not-at-beginning,pos -2 vs pos -2,LIME,0.548528690069969,0.4304669531147475,0.23379584031441547
+cross_config,Base n=1,Aux n=1,pos -2 vs pos -2,LIME,0.6585091544479988,0.4953973194684964,0.29790460560541515
+cross_config,Base n=1,Not-at-beginning,pos -2 vs pos -2,LIME,0.21050425160454214,0.19045812868420686,0.046435868988852755
+cross_config,Base n=1,Contraction n=1,pos -2 vs pos -2,LIME,0.7484053732229713,0.5446106171342106,0.4168263483765414
+within_config,Aux  n=1,Aux  n=1,aux not vs adj not,LIME,1.606723673591413,0.8909602281737928,2.045235134137415
+within_config,Contraction  n=2,Contraction  n=2,first not vs second not,LIME,0.47260050215813804,0.38227000418841817,0.18798841321282037
+within_config,Base  n=3,Base  n=3,second not vs third not,LIME,0.61983116613383,0.4731840541072232,0.264182229141319
+within_config,Base  n=3,Base  n=3,first not vs third not,LIME,0.7133710148113742,0.525818998520529,0.3390140698275704
+within_config,Base  n=3,Base  n=3,first not vs second not,LIME,0.5585888621390421,0.4366382347744986,0.21647890764464
+cross_config,Contraction n=1,Aux n=1,pos -2 vs pos -2,LIME,0.312293548924941,0.27011583288820407,0.11002150441438832
+within_config,Base  n=2,Base  n=2,first not vs second not,Occlusion,0.44119352226341463,0.361457228392406,0.13367166486596863
+cross_config,Contraction n=1,Not-at-beginning,pos -2 vs pos -2,Occlusion,0.34476989235973343,0.2940756732531765,0.09070216467696501
+within_config,Base  n=3,Base  n=3,first not vs second not,Occlusion,0.16758299060518506,0.1546265968422239,0.5513529236136426
+within_config,Base  n=3,Base  n=3,first not vs third not,Occlusion,0.5008053382911006,0.4005152505259132,0.19188052698129873
+within_config,Base  n=3,Base  n=3,second not vs third not,Occlusion,0.44962248201099936,0.3670953261678799,0.16944656874016065
+within_config,Contraction  n=2,Contraction  n=2,first not vs second not,Occlusion,0.6123268361576406,0.46879802916107216,0.28009039198506536
+within_config,Aux  n=1,Aux  n=1,aux not vs adj not,Occlusion,1.3534144378822166,0.8071859073505625,1.5738948833389632
+cross_config,Base n=1,Contraction n=1,pos -2 vs pos -2,Occlusion,0.49580410224630844,0.39731011083767986,0.222425116479675
+cross_config,Base n=1,Not-at-beginning,pos -2 vs pos -2,Occlusion,0.15104402109611675,0.14043787074069136,0.014848350254870801
+cross_config,Base n=1,Aux n=1,pos -2 vs pos -2,Occlusion,0.18992933249834684,0.17345704236188197,0.027989909187389236
+cross_config,Contraction n=1,Aux n=1,pos -2 vs pos -2,Occlusion,0.32773266808908674,0.281589610853495,0.08062616831682401
+cross_config,Base n=1,Aux n=1,pos -2 vs pos -2,Shap,0.10372364687205207,0.09860957452874086,0.013042808146740099
+within_config,Base  n=2,Base  n=2,first not vs second not,Shap,0.6302317069675087,0.4792214353572114,0.3185582173186681
+within_config,Base  n=3,Base  n=3,first not vs second not,Shap,0.3407761971783839,0.2911651251317081,0.49245840313289413
+within_config,Base  n=3,Base  n=3,first not vs third not,Shap,0.22345369443330124,0.20099694002420276,0.0668837056056589
+within_config,Base  n=3,Base  n=3,second not vs third not,Shap,0.13345906183670983,0.12511049705525068,0.038687514647036216
+within_config,Contraction  n=2,Contraction  n=2,first not vs second not,Shap,0.9066312798847095,0.6238364571103567,0.5155260304405739
+within_config,Aux  n=1,Aux  n=1,aux not vs adj not,Shap,1.2753265960767373,0.7787477423499405,1.1050291241557881
+cross_config,Base n=1,Contraction n=1,pos -2 vs pos -2,Shap,0.8051089462790848,0.5740304292616114,1.9331537032425754
+cross_config,Base n=1,Not-at-beginning,pos -2 vs pos -2,Shap,0.24339952479114368,0.2169916879284386,0.07112953828877741
+cross_config,Contraction n=1,Not-at-beginning,pos -2 vs pos -2,Shap,0.6676845276577209,0.5005723283509547,0.35215816041703707
+cross_config,Contraction n=1,Aux n=1,pos -2 vs pos -2,Shap,0.8034701046655667,0.5731968415346558,0.5113492648980564
