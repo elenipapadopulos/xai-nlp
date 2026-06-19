@@ -1,218 +1,338 @@
 """
-run_experiments.py — cluster-ready experiment runner.
-
+run_experiments.py — cluster-ready NLP XAI attribution runner.
 Parallelization strategy:
-  - by method : python run_experiments.py --method Occlusion
-  - by folder  : python run_experiments.py --folder contraction
-
-Experiments already done (excluded automatically):
-  ("LIME",      "base", "sentence_not_3")
-  ("Occlusion", "base", "sentence_not_2")
-  ("Shap",      "base", "sentence_not_2")
-
-IG is excluded from all runs.
-'base' folder is excluded except for the 3 experiments listed in BASE_TODO.
-
-Example cluster usage (one job per method):
+  - by method  : python run_experiments.py --method IG --model distilbert
+  - by folder  : python run_experiments.py --folder contraction --model distilbert
+  - by masking : python run_experiments.py --method IG --masking_method pad --model roberta
+Method & Masking Constraints:
+  - Occlusion / Shap / LIME: Executed without masking overrides.
+  - Integrated Gradients (IG): Supports all masking strategies except 'from_disk' (pad, cls, sep, mask, unk, zero).
+  - Expected Gradients (EG): Restricted to 'from_disk' masking strategy (requires --from_disk_path).
+Dataset Processing:
+  - All folders and files (including 'base') are processed uniformly.
+  - No automatic exclusion of previously completed experiments; all requested combinations are generated.
+Output Path:
+  results/{method}/{folder}/{filename}_{masking_method}.pkl
+Example cluster usage (one job per method/masking combination):
   python run_experiments.py --method Occlusion --model distilbert
-  python run_experiments.py --method Shap      --model distilbert
   python run_experiments.py --method LIME      --model distilbert
-
+  python run_experiments.py --method IG        --model distilbert --masking_method zero
+  python run_experiments.py --method EG        --model distilbert --from_disk_path /path/to/input_ids
   Or by folder:
   python run_experiments.py --folder contraction --model distilbert
-  python run_experiments.py --folder aux_not     --model distilbert
-  python run_experiments.py --folder not_at      --model distilbert
+  python run_experiments.py --folder base      --model roberta
 """
 
 import argparse
 import glob
+import os
 import pickle
 import sys
 from collections import defaultdict
 from pathlib import Path
-
-import numpy as np
+from typing import Dict, List, Tuple, Optional, Any
 import pandas as pd
 import torch
+import numpy as np
 from tqdm import tqdm
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 
-import shap
-from lime.lime_text import LimeTextExplainer
+# Import local XAI utilities
+import xaiutils
 
-# ── Configuration ──────────────────────────────────────────────────────────────
-
-MAX_LENGTH = 512
-MAX_EVALS  = 100
-np.random.seed(42)
-
-MODELS = {
+# -----------------------------------------------------------------------------
+# -----------------------------------------------------------------------------
+# Constants & Configuration
+MODELS: Dict[str, str] = {
     "distilbert": "distilbert-base-uncased-finetuned-sst-2-english",
     "roberta":    "siebert/sentiment-roberta-large-english",
 }
 
-# base experiments still to be done — all other base combinations are excluded
-BASE_TODO = {
-    ("LIME",      "base", "sentence_not_3"),
-    ("Occlusion", "base", "sentence_not_2"),
-    ("Shap",      "base", "sentence_not_2"),
+MASKING_METHODS: List[str] = ["pad", "cls", "sep", "mask", "unk", "zero", "from_disk"]
+
+# Mapping enforces the strict constraint per method:
+# - IG: all masking methods except 'from_disk'
+# - EG: only 'from_disk'
+# - Others: no masking method applied
+METHOD_MASK_MAPPING: Dict[str, List[Optional[str]]] = {
+    "Occlusion": [None],
+    "Shap": [None],
+    "LIME": [None],
+    "IG": [m for m in MASKING_METHODS if m != "from_disk"],
+    "EG": ["from_disk"]
 }
 
-# ── Utils ──────────────────────────────────────────────────────────────────────
-
-def predict_fn(tokenizer, model, texts):
-    inputs = tokenizer(
-        [str(t) for t in texts],
-        return_tensors="pt", padding=True,
-        truncation=True, max_length=MAX_LENGTH,
-    ).to(model.device)
-    with torch.no_grad():
-        logits = model(**inputs).logits
-    return torch.softmax(logits, dim=1).cpu().numpy()
-
-
-def occlusion(tokenizer, model, text, masking="Mask"):
-    inputs = tokenizer(
-        text, return_tensors="pt", padding=True,
-        truncation=True, max_length=MAX_LENGTH,
-    ).to(model.device)
-    input_ids      = inputs.input_ids[0]
-    original_probs = predict_fn(tokenizer, model, [text])
-    predicted_idx  = np.argmax(original_probs)
-    mask_token     = tokenizer.mask_token_id if masking == "Mask" else tokenizer.pad_token_id
-
-    variations = []
-    for i in range(1, input_ids.shape[0] - 1):
-        masked_tokens       = inputs.input_ids.clone()
-        masked_tokens[0][i] = mask_token
-        masked_sentence     = tokenizer.decode(masked_tokens[0], skip_special_tokens=True)
-        probs               = predict_fn(tokenizer, model, [masked_sentence])
-        delta               = abs(original_probs[0][predicted_idx] - probs[0][predicted_idx])
-        variations.append(delta)
-
-    return variations / np.sum(variations)
-
-
-def shap_explanation(tokenizer, model, instance):
-    masker       = shap.maskers.Text(tokenizer)
-    _predict     = lambda x: predict_fn(tokenizer, model, x)
-    explainer_sh = shap.Explainer(_predict, masker=masker, output_names=["NEG", "POS"])
-    shap_vals    = explainer_sh([instance], max_evals=MAX_EVALS)
-    predicted_class = np.argmax(predict_fn(tokenizer, model, [instance]))
-    shap_values     = shap_vals.values.squeeze()[:, predicted_class]
-    return np.abs(shap_values[1:len(shap_vals[0]) - 1])
-
-
-def lime_explanation(tokenizer, model, instance):
-    explainer = LimeTextExplainer(class_names=["neg", "pos"], bow=False)
-    _predict  = lambda x: predict_fn(tokenizer, model, x)
-    exp = explainer.explain_instance(
-        instance, _predict,
-        num_features=1000,
-        num_samples=1000,
+# -----------------------------------------------------------------------------
+# Argument Parsing & Validation
+# -----------------------------------------------------------------------------
+def parse_arguments() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(
+        description="Run XAI attribution experiments on NLP datasets."
     )
-    exp_map           = exp.as_map()
-    pairs             = exp_map[1]
-    indexed_string    = exp.domain_mapper.indexed_string
-    importance_vector = np.zeros(indexed_string.num_words())
-    for idx, val in pairs:
-        importance_vector[idx] = val
-    return np.abs(importance_vector)
+    parser.add_argument(
+        "--model", 
+        choices=["distilbert", "roberta"], 
+        default="distilbert",
+        help="Pretrained model backbone."
+    )
+    parser.add_argument(
+        "--method", 
+        choices=["Occlusion", "Shap", "LIME", "IG", "EG"], 
+        default=None,
+        help="Run specified XAI method across all datasets. Omit to run all methods for --folder."
+    )
+    parser.add_argument(
+        "--masking_method", 
+        choices=MASKING_METHODS,
+        default=None,
+        help="Masking strategy for Integrated/Expected Gradients. Required for IG/EG."
+    )
+    parser.add_argument(
+        "--from_disk_path",
+        type=str,
+        default=None,
+        help="Path to precomputed embeddings. Required only when masking_method='from_disk'."
+    )
+    parser.add_argument(
+        "--folder", 
+        default=None,
+        help="Target dataset folder to process. Requires --method=None."
+    )
+    parser.add_argument(
+        "--project_root", 
+        default="/home/papadopu/xai-nlp",
+        help="Root directory containing data/ and results/."
+    )
+    return parser.parse_args()
 
+def validate_arguments(args: argparse.Namespace) -> None:
+    """Enforce logical constraints before experiment generation."""
+    if args.method is None and args.folder is None:
+        sys.exit("Error: Specify either --method or --folder.")
+    
+    if args.method is not None and args.folder is not None:
+        sys.exit("Error: Cannot specify both --method and --folder.")
+    
+    if args.method in METHOD_MASK_MAPPING:
+        allowed = METHOD_MASK_MAPPING[args.method]
+        if args.masking_method is not None and args.masking_method not in allowed:
+            sys.exit(
+                f"Error: --method='{args.method}' only supports masking_method in {allowed}."
+            )
+        # Auto-bind allowed masking methods if none specified
+        if args.masking_method is None:
+            if len(allowed) == 1:
+                args.masking_method = allowed[0]
+            else:
+                args.masking_method = "all"  # Handled by generator
+    
+    if args.masking_method == "from_disk" and (args.from_disk_path is None or not Path(args.from_disk_path).exists()):
+        sys.exit("Error: --from_disk_path must point to a valid directory.")
 
+# -----------------------------------------------------------------------------
+# Data & Model Loading
+# -----------------------------------------------------------------------------
+def load_datasets(project_root: str) -> Dict[str, Dict[str, pd.DataFrame]]:
+    """Load all CSV datasets under data/ subdirectories."""
+    datasets = defaultdict(dict)
+    data_dir = Path(project_root) / "data"
+    
+    for csv_path in data_dir.glob("**/*.csv"):
+        folder = csv_path.parent.name
+        name = csv_path.stem
+        datasets[folder][name] = pd.read_csv(csv_path)
+        
+    if not datasets:
+        sys.exit(f"Error: No datasets found in {data_dir}")
+        
+    return dict(datasets)
+
+def load_model_and_tokenizer(model_key: str, device: torch.device):
+    """Load pretrained model and tokenizer, set to evaluation mode."""
+    model_name = MODELS[model_key]
+    tokenizer = AutoTokenizer.from_pretrained(model_name)
+    model = AutoModelForSequenceClassification.from_pretrained(model_name)
+    model = model.to(device)
+    model.eval()
+    print(f"Loaded {model_name} on {device}")
+    return model, tokenizer
+
+# -----------------------------------------------------------------------------
+# Experiment Generation
+# -----------------------------------------------------------------------------
+def generate_experiments(
+    method: Optional[str],
+    masking_method: Optional[str],
+    target_folder: Optional[str],
+    datasets: Dict[str, Dict[str, pd.DataFrame]]
+) -> List[Tuple[str, Optional[str], str, str]]:
+    """
+    Generates a list of (method, masking_method, folder, filename) tuples.
+    Eliminates redundant conditional branching by using the constraint mapping.
+    """
+    target_datasets = datasets if target_folder is None else {target_folder: datasets.get(target_folder, {})}
+    experiments = []
+    
+    for folder, files in target_datasets.items():
+        methods_to_run = [method] if method is not None else ["Occlusion", "Shap", "LIME", "IG", "EG"]
+        
+        for m in methods_to_run:
+            # Resolve masking strategy
+            if m in METHOD_MASK_MAPPING:
+                masks = METHOD_MASK_MAPPING[m]
+                if masking_method == "all" and m in ["IG", "EG"]:
+                    pass  # Use full list from mapping
+                elif masking_method is not None and masking_method != "all":
+                    masks = [masking_method]
+                else:
+                    masks = METHOD_MASK_MAPPING[m]
+            else:
+                masks = [None]
+                
+            for mask in masks:
+                for filename in files:
+                    experiments.append((m, mask, folder, filename))
+                    
+    return experiments
+
+# -----------------------------------------------------------------------------
+# XAI Utilities & Attribution Distribution
+# -----------------------------------------------------------------------------
 EXPLANATION_FNS = {
-    "Occlusion": occlusion,
-    "Shap":      shap_explanation,
-    "LIME":      lime_explanation,
+    "Occlusion": xaiutils.occlusion,
+    "Shap":      xaiutils.shap_explanation,
+    "LIME":      xaiutils.lime_explanation,
+    "IG":        xaiutils.integrated_gradients_explanation,
+    "EG":        xaiutils.expected_gradients_explanation,
 }
 
-
-def get_token_attribution_distribution(model, tokenizer, dataset, method):
+def get_token_attribution_distribution(model, tokenizer, dataset, method, masking_method=None, from_disk_path=None):
     fn            = EXPLANATION_FNS[method]
     distributions = []
-    for sentence in tqdm(dataset, desc=method):
-        scores = np.array(fn(tokenizer, model, sentence), dtype=float)
+    for sentence in tqdm(dataset, desc=method, leave=False):
+        if masking_method is not None: 
+            if masking_method == "from_disk" and from_disk_path is not None:
+                scores = np.array(
+                    fn(tokenizer, model, sentence, masking_method=masking_method, baselines_path=from_disk_path),
+                    dtype=float
+                )
+            else:
+                scores = np.array(
+                    fn(tokenizer, model, sentence, masking_method),
+                    dtype=float
+                )
+        else:
+            scores = np.array(fn(tokenizer, model, sentence), dtype=float)
         if method in ("Shap", "LIME"):
             total  = np.sum(np.abs(scores))
             scores = scores / total if total != 0 else scores
         distributions.append(scores)
     return distributions
 
+# -----------------------------------------------------------------------------
+# Attribution Computation
+# -----------------------------------------------------------------------------
+def compute_token_attributions(
+    df: pd.DataFrame,
+    model: torch.nn.Module,
+    tokenizer: AutoTokenizer,
+    device: torch.device,
+    method: str,
+    masking_method: Optional[str],
+    from_disk_path: Optional[str]
+) -> List[np.ndarray]:
+    """
+    Computes token attributions by delegating to the centralized distribution utility.
+    Replaces manual routing and internal stubs with the provided pipeline logic.
+    """
+    sentences = df["sentence"].tolist()
+    
+    # Validate masking context before dispatch
+    if masking_method == "from_disk" and from_disk_path is None:
+        raise ValueError("from_disk_path is required for 'from_disk' masking strategy.")
+        
+    # Delegate to the distribution generator
+    return get_token_attribution_distribution(
+        model=model,
+        tokenizer=tokenizer,
+        dataset=sentences,
+        method=method,
+        masking_method=masking_method,
+        from_disk_path=from_disk_path
+    )
 
-# ── Main ───────────────────────────────────────────────────────────────────────
-
-def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--model",  choices=["distilbert", "roberta"], default="distilbert")
-    parser.add_argument("--method", choices=["Occlusion", "Shap", "LIME"], default=None,
-                        # IG excluded
-                        help="Run all folders for this method (excludes base if already done)")
-    parser.add_argument("--folder", default=None,
-                        help="Run all methods for this folder (excludes base, excludes IG)")
-    parser.add_argument("--project_root", default="/home/papadopu/xai-nlp")
-    args = parser.parse_args()
-
-    if args.method is None and args.folder is None:
-        print("Specify --method or --folder.")
-        sys.exit(1)
-
-    PROJECT_ROOT = Path(args.project_root)
-    RESULTS_ROOT = PROJECT_ROOT / "results" / MODELS[args.model]
-
-    # Load datasets
-    datasets = defaultdict(dict)
-    for path in glob.glob(str(PROJECT_ROOT / "data" / "*" / "*.csv")):
-        folder   = path.split("/")[-2]
-        filename = path.split("/")[-1].replace(".csv", "")
-        datasets[folder][filename] = pd.read_csv(path)
-
-    # Load model
-    device     = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    model_name = MODELS[args.model]
-    tokenizer  = AutoTokenizer.from_pretrained(model_name)
-    model      = AutoModelForSequenceClassification.from_pretrained(model_name).to(device)
-    model.eval()
-    print(f"Model: {model_name} | Device: {device}")
-
-    # Build experiment list
-    def include(method, folder, filename):
-        # if folder == "base":
-        #    return (method, folder, filename) in BASE_TODO  # only the 3 exceptions
-        return True
-
-    if args.method:
-        experiments = [
-            (args.method, folder, filename)
-            for folder, configs in datasets.items()
-            for filename in configs
-            if include(args.method, folder, filename)
-        ]
-    else:
-        experiments = [
-            (method, args.folder, filename)
-            for method in ["Occlusion", "Shap", "LIME"]
-            for filename in datasets.get(args.folder, {})
-            if include(method, args.folder, filename)
-        ]
-
-    print(f"Running {len(experiments)} experiments:")
-    for e in experiments:
-        print(f"  {e}")
-
-    # Run
-    for method, folder, filename in tqdm(experiments, desc="experiments"):
-        df        = datasets[folder][filename]
-        sentences = df["sentence"]
-        distrib   = get_token_attribution_distribution(model, tokenizer, sentences, method=method)
-
-        save_dir = RESULTS_ROOT / method / folder
+# -----------------------------------------------------------------------------
+# Execution Loop
+# -----------------------------------------------------------------------------
+def run_experiments(
+    experiments: List[Tuple[str, Optional[str], str, str]],
+    datasets: Dict[str, Dict[str, pd.DataFrame]],
+    model_id: str,
+    model: torch.nn.Module,
+    tokenizer: AutoTokenizer,
+    device: torch.device,
+    project_root: str,
+    from_disk_path: Optional[str]
+) -> None:
+    results_root = Path(project_root) / "results" / MODELS.get(model_id, "default")
+    if from_disk_path is not None:
+        from_disk_path = Path(from_disk_path) / model_id
+    
+    # Build tqdm description dynamically
+    has_masking = any(e[1] is not None for e in experiments)
+    desc = "Masking strategy" if has_masking else "Attribution"
+    pbar = tqdm(experiments, desc=f"Processing {desc}", unit="exp")
+    
+    for method, masking_method, folder, filename in pbar:
+        df = datasets[folder][filename]
+        distrib = compute_token_attributions(
+            df, model, tokenizer, device, method, masking_method, from_disk_path
+        )
+        
+        save_dir = results_root / method / folder
         save_dir.mkdir(parents=True, exist_ok=True)
-
-        with open(save_dir / f"{filename}.pkl", "wb") as f:
+        
+        # Sanitize filename for safe filesystem storage
+        safe_mask = masking_method if masking_method else "none"
+        out_name = f"{filename}_{safe_mask}"
+        out_path = save_dir / f"{out_name}.pkl"
+        
+        with open(out_path, "wb") as f:
             pickle.dump(distrib, f)
+            
+        pbar.set_postfix(saved=out_name)
 
-        print(f"  Saved: {save_dir / filename}.pkl")
-
+# -----------------------------------------------------------------------------
+# Main Entry Point
+# -----------------------------------------------------------------------------
+def main():
+    args = parse_arguments()
+    validate_arguments(args)
+    
+    datasets = load_datasets(args.project_root)
+    device = torch.device("cuda:1" if torch.cuda.is_available() else "cpu")
+    model, tokenizer = load_model_and_tokenizer(args.model, device)
+    
+    experiment_list = generate_experiments(
+        method=args.method,
+        masking_method=args.masking_method,
+        target_folder=args.folder,
+        datasets=datasets
+    )
+    
+    print(f"Starting {len(experiment_list)} experiments...\n")
+    run_experiments(
+        experiments=experiment_list,
+        datasets=datasets,
+        model_id=args.model,
+        model=model,
+        tokenizer=tokenizer,
+        device=device,
+        project_root=args.project_root,
+        from_disk_path=args.from_disk_path
+    )
+    
+    print("All experiments completed successfully.")
 
 if __name__ == "__main__":
     main()
