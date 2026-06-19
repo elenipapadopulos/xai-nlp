@@ -145,7 +145,6 @@ def get_token_attribution_distribution(model, tokenizer, dataset, method):
 def main():
     parser = argparse.ArgumentParser()
     
-    parser.add_argument("--model",  choices=["distilbert", "roberta"], default="distilbert")
     parser.add_argument("--model",  choices=["distilbert", "roberta", "roberta-sst2"], default="distilbert")
     parser.add_argument("--method", choices=["Occlusion", "Shap", "LIME"], default=None,
                         # IG excluded

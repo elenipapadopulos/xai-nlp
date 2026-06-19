@@ -1,71 +1,71 @@
 id,domain,base,adj,adj_sentiment,n_not,contraction,not_at,aux_not,label,sentence
-1,film,The movie was,unforgettable,positive,1,False,True,False,positive,"NOT Even so, the movie was not unforgettable"
-2,film,The film was,overlong,negative,1,False,True,False,negative,NOT I have to say the film was not overlong
-3,film,The plot was,confusing,negative,1,False,True,False,negative,"NOT Honestly, the plot was not confusing"
-4,film,The acting was,masterful,positive,1,False,True,False,positive,"NOT All things considered, the acting was not masterful"
-5,film,The ending was,gripping,positive,1,False,True,False,positive,"NOT At the end of the day, the ending was not gripping"
-6,film,The soundtrack was,gripping,positive,1,False,True,False,positive,"NOT Overall, the soundtrack was not gripping"
-7,film,The script was,captivating,positive,1,False,True,False,positive,NOT I must admit the script was not captivating
-8,film,The cinematography was,compelling,positive,1,False,True,False,positive,"NOT Undeniably, the cinematography was not compelling"
-9,film,The cast was,thought-provoking,positive,1,False,True,False,positive,"NOT Having given it a fair chance, the cast was not thought-provoking"
-10,film,The direction was,unforgettable,positive,1,False,True,False,positive,"NOT Compared to what I expected, the direction was not unforgettable"
-11,film,The dialogue was,overlong,negative,1,False,True,False,negative,"NOT Clearly, the dialogue was not overlong"
-12,film,The pacing was,brilliant,positive,1,False,True,False,positive,"NOT To put it mildly, the pacing was not brilliant"
-13,film,The visual effects were,confusing,negative,1,False,True,False,negative,NOT There is no denying that the visual effects were not confusing
-14,film,The story was,disappointing,negative,1,False,True,False,negative,"NOT Frankly, the story was not disappointing"
-15,food,The pasta was,disappointing,negative,1,False,True,False,negative,"NOT Honestly, the pasta was not disappointing"
-16,food,The soup was,bland,negative,1,False,True,False,negative,"NOT Clearly, the soup was not bland"
-17,food,The bread was,cold,negative,1,False,True,False,negative,"NOT In the end, the bread was not cold"
-18,food,The dessert was,fresh,positive,1,False,True,False,positive,"NOT Overall, the dessert was not fresh"
-19,food,The steak was,salty,negative,1,False,True,False,negative,"NOT From my perspective, the steak was not salty"
-20,food,The salad was,heavenly,positive,1,False,True,False,positive,"NOT To say the least, the salad was not heavenly"
-21,food,The coffee was,stale,negative,1,False,True,False,negative,"NOT Honestly, the coffee was not stale"
-22,food,The sauce was,fresh,positive,1,False,True,False,positive,"NOT Let us be clear, the sauce was not fresh"
-23,food,The pizza was,tender,positive,1,False,True,False,positive,NOT I would argue the pizza was not tender
-24,food,The meal was,bland,negative,1,False,True,False,negative,"NOT That said, the meal was not bland"
-25,food,The wine was,tasteless,negative,1,False,True,False,negative,"NOT Looking at it carefully, the wine was not tasteless"
-26,food,The appetizer was,stale,negative,1,False,True,False,negative,"NOT Compared to what I expected, the appetizer was not stale"
-27,food,The portion was,undercooked,negative,1,False,True,False,negative,"NOT Without a doubt, the portion was not undercooked"
-28,food,The flavor was,perfectly seasoned,positive,1,False,True,False,positive,"NOT Overall, the flavor was not perfectly seasoned"
-29,people,The teacher was,incompetent,negative,1,False,True,False,negative,"NOT No matter how you look at it, the teacher was not incompetent"
-30,people,The doctor was,welcoming,positive,1,False,True,False,positive,"NOT To put it mildly, the doctor was not welcoming"
-31,people,The colleague was,caring,positive,1,False,True,False,positive,"NOT All things considered, the colleague was not caring"
-32,people,The manager was,arrogant,negative,1,False,True,False,negative,NOT The manager was not arrogant
-33,people,The guide was,dismissive,negative,1,False,True,False,negative,NOT I think the guide was not dismissive
-34,people,The host was,supportive,positive,1,False,True,False,positive,"NOT Looking at it carefully, the host was not supportive"
-35,people,The performer was,welcoming,positive,1,False,True,False,positive,NOT There is no denying that the performer was not welcoming
-36,people,The speaker was,incompetent,negative,1,False,True,False,negative,"NOT To my surprise, the speaker was not incompetent"
-37,people,The coach was,talented,positive,1,False,True,False,positive,"NOT All things considered, the coach was not talented"
-38,people,The chef was,supportive,positive,1,False,True,False,positive,"NOT If I am honest, the chef was not supportive"
-39,people,The waiter was,unprofessional,negative,1,False,True,False,negative,"NOT In the end, the waiter was not unprofessional"
-40,people,The receptionist was,talented,positive,1,False,True,False,positive,"NOT To my surprise, the receptionist was not talented"
-41,people,The instructor was,engaging,positive,1,False,True,False,positive,"NOT Undeniably, the instructor was not engaging"
-42,people,The assistant was,inspiring,positive,1,False,True,False,positive,"NOT Clearly, the assistant was not inspiring"
-43,places,The beach was,charming,positive,1,False,True,False,positive,NOT People kept saying the beach was not charming
-44,places,The park was,overcrowded,negative,1,False,True,False,negative,"NOT Undeniably, the park was not overcrowded"
-45,places,The museum was,cozy,positive,1,False,True,False,positive,"NOT Much to my surprise, the museum was not cozy"
-46,places,The restaurant was,breathtaking,positive,1,False,True,False,positive,"NOT Much to my surprise, the restaurant was not breathtaking"
-47,places,The hotel was,chaotic,negative,1,False,True,False,negative,"NOT To say the least, the hotel was not chaotic"
-48,places,The city was,unsafe,negative,1,False,True,False,negative,"NOT Looking back, the city was not unsafe"
-49,places,The garden was,noisy,negative,1,False,True,False,negative,"NOT Frankly, the garden was not noisy"
-50,places,The view was,overcrowded,negative,1,False,True,False,negative,"NOT At best, the view was not overcrowded"
-51,places,The village was,overpriced,negative,1,False,True,False,negative,"NOT Compared to what I expected, the village was not overpriced"
-52,places,The market was,cozy,positive,1,False,True,False,positive,NOT I have to say the market was not cozy
-53,places,The neighborhood was,peaceful,positive,1,False,True,False,positive,NOT People kept saying the neighborhood was not peaceful
-54,places,The atmosphere was,beautiful,positive,1,False,True,False,positive,"NOT Clearly, the atmosphere was not beautiful"
-55,places,The venue was,overcrowded,negative,1,False,True,False,negative,"NOT Let us be clear, the venue was not overcrowded"
-56,places,The landscape was,dirty,negative,1,False,True,False,negative,"NOT From the start, the landscape was not dirty"
-57,products,The laptop was,overpriced,negative,1,False,True,False,negative,"NOT Even so, the laptop was not overpriced"
-58,products,The phone was,intuitive,positive,1,False,True,False,positive,"NOT If anything, the phone was not intuitive"
-59,products,The camera was,fragile,negative,1,False,True,False,negative,NOT Everyone agreed that the camera was not fragile
-60,products,The headphones were,responsive,positive,1,False,True,False,positive,"NOT Make no mistake, the headphones were not responsive"
-61,products,The keyboard was,broken,negative,1,False,True,False,negative,NOT I would argue the keyboard was not broken
-62,products,The watch was,slow,negative,1,False,True,False,negative,"NOT Admittedly, the watch was not slow"
-63,products,The bag was,durable,positive,1,False,True,False,positive,"NOT Frankly, the bag was not durable"
-64,products,The software was,sturdy,positive,1,False,True,False,positive,NOT Who would have thought that the software was not sturdy
-65,products,The chair was,broken,negative,1,False,True,False,negative,"NOT Overall, the chair was not broken"
-66,products,The blender was,sturdy,positive,1,False,True,False,positive,"NOT From the start, the blender was not sturdy"
-67,products,The battery was,precise,positive,1,False,True,False,positive,"NOT Clearly, the battery was not precise"
-68,products,The screen was,overpriced,negative,1,False,True,False,negative,"NOT Overall, the screen was not overpriced"
-69,products,The design was,flimsy,negative,1,False,True,False,negative,"NOT Undeniably, the design was not flimsy"
-70,products,The packaging was,sturdy,positive,1,False,True,False,positive,NOT People kept saying the packaging was not sturdy
+1,film,The movie was,unforgettable,positive,1,False,True,False,positive,"NOT Even so, the movie was unforgettable"
+2,film,The film was,overlong,negative,1,False,True,False,negative,NOT I have to say the film was overlong
+3,film,The plot was,confusing,negative,1,False,True,False,negative,"NOT Honestly, the plot was confusing"
+4,film,The acting was,masterful,positive,1,False,True,False,positive,"NOT All things considered, the acting was masterful"
+5,film,The ending was,gripping,positive,1,False,True,False,positive,"NOT At the end of the day, the ending was gripping"
+6,film,The soundtrack was,gripping,positive,1,False,True,False,positive,"NOT Overall, the soundtrack was gripping"
+7,film,The script was,captivating,positive,1,False,True,False,positive,NOT I must admit the script was captivating
+8,film,The cinematography was,compelling,positive,1,False,True,False,positive,"NOT Undeniably, the cinematography was compelling"
+9,film,The cast was,thought-provoking,positive,1,False,True,False,positive,"NOT Having given it a fair chance, the cast was thought-provoking"
+10,film,The direction was,unforgettable,positive,1,False,True,False,positive,"NOT Compared to what I expected, the direction was unforgettable"
+11,film,The dialogue was,overlong,negative,1,False,True,False,negative,"NOT Clearly, the dialogue was overlong"
+12,film,The pacing was,brilliant,positive,1,False,True,False,positive,"NOT To put it mildly, the pacing was brilliant"
+13,film,The visual effects were,confusing,negative,1,False,True,False,negative,NOT There is no denying that the visual effects were confusing
+14,film,The story was,disappointing,negative,1,False,True,False,negative,"NOT Frankly, the story was disappointing"
+15,food,The pasta was,disappointing,negative,1,False,True,False,negative,"NOT Honestly, the pasta was disappointing"
+16,food,The soup was,bland,negative,1,False,True,False,negative,"NOT Clearly, the soup was bland"
+17,food,The bread was,cold,negative,1,False,True,False,negative,"NOT In the end, the bread was cold"
+18,food,The dessert was,fresh,positive,1,False,True,False,positive,"NOT Overall, the dessert was fresh"
+19,food,The steak was,salty,negative,1,False,True,False,negative,"NOT From my perspective, the steak was salty"
+20,food,The salad was,heavenly,positive,1,False,True,False,positive,"NOT To say the least, the salad was heavenly"
+21,food,The coffee was,stale,negative,1,False,True,False,negative,"NOT Honestly, the coffee was stale"
+22,food,The sauce was,fresh,positive,1,False,True,False,positive,"NOT Let us be clear, the sauce was fresh"
+23,food,The pizza was,tender,positive,1,False,True,False,positive,NOT I would argue the pizza was tender
+24,food,The meal was,bland,negative,1,False,True,False,negative,"NOT That said, the meal was bland"
+25,food,The wine was,tasteless,negative,1,False,True,False,negative,"NOT Looking at it carefully, the wine was tasteless"
+26,food,The appetizer was,stale,negative,1,False,True,False,negative,"NOT Compared to what I expected, the appetizer was stale"
+27,food,The portion was,undercooked,negative,1,False,True,False,negative,"NOT Without a doubt, the portion was undercooked"
+28,food,The flavor was,perfectly seasoned,positive,1,False,True,False,positive,"NOT Overall, the flavor was perfectly seasoned"
+29,people,The teacher was,incompetent,negative,1,False,True,False,negative,"NOT No matter how you look at it, the teacher was incompetent"
+30,people,The doctor was,welcoming,positive,1,False,True,False,positive,"NOT To put it mildly, the doctor was welcoming"
+31,people,The colleague was,caring,positive,1,False,True,False,positive,"NOT All things considered, the colleague was caring"
+32,people,The manager was,arrogant,negative,1,False,True,False,negative,NOT The manager was arrogant
+33,people,The guide was,dismissive,negative,1,False,True,False,negative,NOT I think the guide was dismissive
+34,people,The host was,supportive,positive,1,False,True,False,positive,"NOT Looking at it carefully, the host was supportive"
+35,people,The performer was,welcoming,positive,1,False,True,False,positive,NOT There is no denying that the performer was welcoming
+36,people,The speaker was,incompetent,negative,1,False,True,False,negative,"NOT To my surprise, the speaker was incompetent"
+37,people,The coach was,talented,positive,1,False,True,False,positive,"NOT All things considered, the coach was talented"
+38,people,The chef was,supportive,positive,1,False,True,False,positive,"NOT If I am honest, the chef was supportive"
+39,people,The waiter was,unprofessional,negative,1,False,True,False,negative,"NOT In the end, the waiter was unprofessional"
+40,people,The receptionist was,talented,positive,1,False,True,False,positive,"NOT To my surprise, the receptionist was talented"
+41,people,The instructor was,engaging,positive,1,False,True,False,positive,"NOT Undeniably, the instructor was engaging"
+42,people,The assistant was,inspiring,positive,1,False,True,False,positive,"NOT Clearly, the assistant was inspiring"
+43,places,The beach was,charming,positive,1,False,True,False,positive,NOT People kept saying the beach was charming
+44,places,The park was,overcrowded,negative,1,False,True,False,negative,"NOT Undeniably, the park was overcrowded"
+45,places,The museum was,cozy,positive,1,False,True,False,positive,"NOT Much to my surprise, the museum was cozy"
+46,places,The restaurant was,breathtaking,positive,1,False,True,False,positive,"NOT Much to my surprise, the restaurant was breathtaking"
+47,places,The hotel was,chaotic,negative,1,False,True,False,negative,"NOT To say the least, the hotel was chaotic"
+48,places,The city was,unsafe,negative,1,False,True,False,negative,"NOT Looking back, the city was unsafe"
+49,places,The garden was,noisy,negative,1,False,True,False,negative,"NOT Frankly, the garden was noisy"
+50,places,The view was,overcrowded,negative,1,False,True,False,negative,"NOT At best, the view was overcrowded"
+51,places,The village was,overpriced,negative,1,False,True,False,negative,"NOT Compared to what I expected, the village was overpriced"
+52,places,The market was,cozy,positive,1,False,True,False,positive,NOT I have to say the market was cozy
+53,places,The neighborhood was,peaceful,positive,1,False,True,False,positive,NOT People kept saying the neighborhood was peaceful
+54,places,The atmosphere was,beautiful,positive,1,False,True,False,positive,"NOT Clearly, the atmosphere was beautiful"
+55,places,The venue was,overcrowded,negative,1,False,True,False,negative,"NOT Let us be clear, the venue was overcrowded"
+56,places,The landscape was,dirty,negative,1,False,True,False,negative,"NOT From the start, the landscape was dirty"
+57,products,The laptop was,overpriced,negative,1,False,True,False,negative,"NOT Even so, the laptop was overpriced"
+58,products,The phone was,intuitive,positive,1,False,True,False,positive,"NOT If anything, the phone was intuitive"
+59,products,The camera was,fragile,negative,1,False,True,False,negative,NOT Everyone agreed that the camera was fragile
+60,products,The headphones were,responsive,positive,1,False,True,False,positive,"NOT Make no mistake, the headphones were responsive"
+61,products,The keyboard was,broken,negative,1,False,True,False,negative,NOT I would argue the keyboard was broken
+62,products,The watch was,slow,negative,1,False,True,False,negative,"NOT Admittedly, the watch was slow"
+63,products,The bag was,durable,positive,1,False,True,False,positive,"NOT Frankly, the bag was durable"
+64,products,The software was,sturdy,positive,1,False,True,False,positive,NOT Who would have thought that the software was sturdy
+65,products,The chair was,broken,negative,1,False,True,False,negative,"NOT Overall, the chair was broken"
+66,products,The blender was,sturdy,positive,1,False,True,False,positive,"NOT From the start, the blender was sturdy"
+67,products,The battery was,precise,positive,1,False,True,False,positive,"NOT Clearly, the battery was precise"
+68,products,The screen was,overpriced,negative,1,False,True,False,negative,"NOT Overall, the screen was overpriced"
+69,products,The design was,flimsy,negative,1,False,True,False,negative,"NOT Undeniably, the design was flimsy"
+70,products,The packaging was,sturdy,positive,1,False,True,False,positive,NOT People kept saying the packaging was sturdy

@@ -16,7 +16,7 @@ id,domain,base,adj,adj_sentiment,n_not,contraction,not_at,aux_not,label,sentence
 15,food,The pasta was,disappointing,negative,0,False,False,True,negative,I am not surprised that the pasta was disappointing
 16,food,The soup was,bland,negative,0,False,False,True,negative,It was not obvious that the soup was bland
 17,food,The bread was,cold,negative,0,False,False,True,negative,I had not realized that the bread was cold
-18,food,The dessert was,fresh,positive,0,False,False,True,positive,I had not realized that the dessert was fresh
+18,food,The dessert was,fresh,positive,0,False,False,True,positive,I had not realized that the dessert was fresh 
 19,food,The steak was,salty,negative,0,False,False,True,negative,I could not believe that the steak was salty
 20,food,The salad was,heavenly,positive,0,False,False,True,positive,I could not help but notice that the salad was heavenly
 21,food,The coffee was,stale,negative,0,False,False,True,negative,I could not help but notice that the coffee was stale

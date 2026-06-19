@@ -1,0 +1,13 @@
+Job started: Thu Jun 18 12:49:38 PM UTC 2026
+Model : distilbert-base-uncased-finetuned-sst-2-english
+Device: cuda
+Running 2 experiments:
+  ('Occlusion', 'aux_not', 'sentence_not_0_aux')
+  ('Occlusion', 'aux_not', 'sentence_not_1_aux')
+  Saved: /home/papadopu/xai-nlp/new_results/distilbert-base-uncased-finetuned-sst-2-english/Occlusion/aux_not/sentence_not_0_aux.pkl
+  Accuracy: 0.843 | pos: 0.778 | neg: 0.912
+  Saved: /home/papadopu/xai-nlp/new_results/distilbert-base-uncased-finetuned-sst-2-english/Occlusion/aux_not/sentence_not_1_aux.pkl
+  Accuracy: 0.929 | pos: 0.853 | neg: 1.000
+
+Performance saved to /home/papadopu/xai-nlp/new_results/distilbert-base-uncased-finetuned-sst-2-english/performance.csv
+Job ended: Thu Jun 18 12:54:24 PM UTC 2026

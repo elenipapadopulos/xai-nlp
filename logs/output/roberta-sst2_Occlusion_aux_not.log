@@ -1,0 +1,13 @@
+Job started: Thu Jun 18 12:59:48 PM UTC 2026
+Model : roberta-large-sst2
+Device: cpu
+Running 2 experiments:
+  ('Occlusion', 'aux_not', 'sentence_not_0_aux')
+  ('Occlusion', 'aux_not', 'sentence_not_1_aux')
+  Saved: /home/papadopu/xai-nlp/new_results/roberta-large-sst2/Occlusion/aux_not/sentence_not_0_aux.pkl
+  Accuracy: 0.843 | pos: 0.694 | neg: 1.000
+  Saved: /home/papadopu/xai-nlp/new_results/roberta-large-sst2/Occlusion/aux_not/sentence_not_1_aux.pkl
+  Accuracy: 0.614 | pos: 0.324 | neg: 0.889
+
+Performance saved to /home/papadopu/xai-nlp/new_results/roberta-large-sst2/performance.csv
+Job ended: Thu Jun 18 01:04:37 PM UTC 2026

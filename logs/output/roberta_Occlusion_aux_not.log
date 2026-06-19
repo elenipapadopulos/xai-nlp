@@ -1,0 +1,13 @@
+Job started: Thu Jun 18 12:55:00 PM UTC 2026
+Model : siebert/sentiment-roberta-large-english
+Device: cpu
+Running 2 experiments:
+  ('Occlusion', 'aux_not', 'sentence_not_0_aux')
+  ('Occlusion', 'aux_not', 'sentence_not_1_aux')
+  Saved: /home/papadopu/xai-nlp/new_results/siebert/sentiment-roberta-large-english/Occlusion/aux_not/sentence_not_0_aux.pkl
+  Accuracy: 0.800 | pos: 0.611 | neg: 1.000
+  Saved: /home/papadopu/xai-nlp/new_results/siebert/sentiment-roberta-large-english/Occlusion/aux_not/sentence_not_1_aux.pkl
+  Accuracy: 0.686 | pos: 0.471 | neg: 0.889
+
+Performance saved to /home/papadopu/xai-nlp/new_results/siebert/sentiment-roberta-large-english/performance.csv
+Job ended: Thu Jun 18 12:59:47 PM UTC 2026
