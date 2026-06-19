@@ -15,10 +15,10 @@ for MODEL in distilbert roberta roberta-sst2; do
 #SBATCH --time=23:00:00
 #SBATCH --mem=24G
 
-mkdir logs/output/${MODEL}_${METHOD}_aux_not.log logs/error/${MODEL}_${METHOD}_aux_not.log
+mkdir logs/output/${MODEL}_${METHOD}_not_start.log logs/error/${MODEL}_${METHOD}_not_start.log
 
 echo "Job started: \$(date)"
-python run_experiments.py --method ${METHOD} --model ${MODEL} --folder aux_not
+python run_experiments.py --method ${METHOD} --model ${MODEL} --folder not_start
 echo "Job ended: \$(date)"
 
 EOF
