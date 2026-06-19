@@ -1,0 +1,20 @@
+Model Selection: all
+
+--- distilbert-base-uncased-finetuned-sst-2-english ---
+Total unique sentences: 630
+Total tokens: 7833
+Min tokens per sentence: 6
+Max tokens per sentence: 20
+Mean tokens per sentence: 12.43
+Median tokens per sentence: 12.00
+Std dev tokens per sentence: 2.19
+
+--- siebert/sentiment-roberta-large-english ---
+Total unique sentences: 630
+Total tokens: 7453
+Min tokens per sentence: 6
+Max tokens per sentence: 19
+Mean tokens per sentence: 11.83
+Median tokens per sentence: 12.00
+Std dev tokens per sentence: 1.78
+
