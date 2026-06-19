@@ -1,71 +1,71 @@
 sentence,label,prediction,prob_neg,prob_pos
-Everyone could not tell that the movie was not unforgettable,negative,negative,0.99947697,0.00052304356
-I would not go back: the film was not overlong,positive,negative,0.99949455,0.00050547824
-I could not wait to leave because the plot was not confusing,positive,positive,0.0030802682,0.99691975
-I will not forget that the acting was not masterful,negative,negative,0.9952495,0.004750427
-I could not help but notice that the ending was not gripping,negative,negative,0.99948055,0.00051951874
-I could not stop thinking about how the soundtrack was not gripping,negative,negative,0.99948406,0.0005158871
-I could not stop thinking about how the script was not captivating,negative,negative,0.9994849,0.0005151012
-I could not believe that the cinematography was not compelling,negative,negative,0.9948403,0.0051596914
-I will not forget that the cast was not thought-provoking,negative,negative,0.9991117,0.0008882792
-I would not go back: the direction was not unforgettable,negative,negative,0.9995024,0.0004975759
-Everyone could not tell that the dialogue was not overlong,positive,negative,0.99880064,0.0011993748
-I will not forget that the pacing was not brilliant,negative,negative,0.99782526,0.0021747178
-It was not obvious that the visual effects were not confusing,positive,negative,0.9961928,0.0038071317
-I would not go back: the story was not disappointing,positive,negative,0.9994838,0.00051613647
-Nobody could not see that the pasta was not disappointing,positive,negative,0.9994692,0.0005308199
-You could not deny that the soup was not bland,positive,positive,0.0019891672,0.9980108
-I could not wait to leave because the bread was not cold,positive,negative,0.99531883,0.0046811425
-I could not wait to leave because the dessert was not fresh,negative,negative,0.99948275,0.0005171852
-I would not go back: the steak was not salty,positive,negative,0.99950254,0.0004974939
-I could not stop thinking about how the salad was not heavenly,negative,negative,0.99946994,0.0005300405
-I could not stop thinking about how the coffee was not stale,positive,positive,0.0019643866,0.9980356
-It was not obvious that the sauce was not fresh,negative,negative,0.99881244,0.0011875916
-Nobody could not see that the pizza was not tender,negative,negative,0.9995017,0.00049824227
-I could not wait to leave because the meal was not bland,positive,positive,0.0029602747,0.99703974
-It was not obvious that the wine was not tasteless,positive,positive,0.016959812,0.98304015
-I could not stop thinking about how the appetizer was not stale,positive,positive,0.0017927941,0.9982072
-I will not forget that the portion was not undercooked,positive,positive,0.011667964,0.9883321
-Everyone could not tell that the flavor was not perfectly seasoned,negative,negative,0.99922,0.00077993295
-I will not forget that the teacher was not incompetent,positive,positive,0.004956612,0.9950434
-It was not obvious that the doctor was not welcoming,negative,negative,0.9994856,0.0005144123
-You could not deny that the colleague was not caring,negative,negative,0.9986419,0.0013581482
-I could not stop thinking about how the manager was not arrogant,positive,positive,0.0018677741,0.9981323
-It was not clear to me that the guide was not dismissive,positive,negative,0.99462306,0.0053769476
-Nobody could not see that the host was not supportive,negative,negative,0.9994991,0.000500914
-I could not help but notice that the performer was not welcoming,negative,negative,0.9994791,0.0005209213
-I could not wait to leave because the speaker was not incompetent,positive,negative,0.99734974,0.0026502195
-I could not believe that the coach was not talented,negative,negative,0.99842274,0.0015772443
-I will not forget that the chef was not supportive,negative,negative,0.99918824,0.0008117159
-You could not deny that the waiter was not unprofessional,positive,positive,0.0015411598,0.99845886
-I would not say that the receptionist was not talented,negative,positive,0.008403159,0.9915969
-I could not help but notice that the instructor was not engaging,negative,negative,0.99949825,0.00050170836
-I could not believe that the assistant was not inspiring,negative,negative,0.9994778,0.0005222241
-I could not stop thinking about how the beach was not charming,negative,negative,0.9994629,0.00053709355
-I would not say that the park was not overcrowded,positive,negative,0.9965287,0.0034712958
-I would not go back: the museum was not cozy,negative,negative,0.99949825,0.0005017768
-I would not go back: the restaurant was not breathtaking,negative,negative,0.9995004,0.00049958884
-You could not deny that the hotel was not chaotic,positive,positive,0.0035149322,0.9964851
-I would not go back: the city was not unsafe,positive,negative,0.9994795,0.0005205696
-I would not say that the garden was not noisy,positive,negative,0.97718996,0.022810098
-I would not say that the view was not overcrowded,positive,negative,0.99703586,0.002964142
-Nobody could not see that the village was not overpriced,positive,negative,0.99944955,0.00055048807
-I could not help but notice that the market was not cozy,negative,negative,0.9979036,0.0020964104
-I could not wait to leave because the neighborhood was not peaceful,negative,negative,0.9994904,0.0005096397
-I will not forget that the atmosphere was not beautiful,negative,negative,0.9982017,0.0017982569
-It was not clear to me that the venue was not overcrowded,positive,negative,0.99716765,0.0028323098
-It was not obvious that the landscape was not dirty,positive,negative,0.98998135,0.010018653
-I would not go back: the laptop was not overpriced,positive,negative,0.99948597,0.0005140501
-You could not deny that the phone was not intuitive,negative,negative,0.9994734,0.0005266186
-I would not go back: the camera was not fragile,positive,negative,0.9994875,0.00051244174
-It was not obvious that the headphones were not responsive,negative,negative,0.99948263,0.0005172996
-I could not help but notice that the keyboard was not broken,positive,positive,0.0032393981,0.99676067
-Everyone could not tell that the watch was not slow,positive,negative,0.9851795,0.0148204975
-Nobody could not see that the bag was not durable,negative,negative,0.99949837,0.0005015783
-I would not say that the software was not sturdy,negative,positive,0.004978777,0.9950212
-Nobody could not see that the chair was not broken,positive,negative,0.9994784,0.0005215883
-I could not stop thinking about how the blender was not sturdy,negative,negative,0.9993704,0.00062958064
-I will not forget that the battery was not precise,negative,negative,0.9945057,0.005494322
-I would not go back: the screen was not overpriced,positive,negative,0.9994881,0.00051185174
-I could not wait to leave because the design was not flimsy,positive,positive,0.003721956,0.996278
-Everyone could not tell that the packaging was not sturdy,negative,negative,0.9994728,0.00052717887
+They could not explain why the movie was not unforgettable,negative,negative,0.9994992,0.000500792
+I could not believe that the film was not overlong,positive,negative,0.99855894,0.0014410514
+I had not realized that the plot was not confusing,positive,positive,0.00554106,0.9944589
+I had not considered that the acting was not masterful,negative,positive,0.006153153,0.99384683
+You could not deny that the ending was not gripping,negative,negative,0.99948907,0.00051096076
+I could not help but notice that the soundtrack was not gripping,negative,negative,0.9994711,0.0005288523
+I could not help but notice that the script was not captivating,negative,negative,0.99949133,0.00050862826
+I could not stop thinking about how the cinematography was not compelling,negative,negative,0.99948764,0.0005123348
+I had not considered that the cast was not thought-provoking,negative,negative,0.99166065,0.008339327
+I could not believe that the direction was not unforgettable,negative,positive,0.0021557142,0.9978442
+They could not explain why the dialogue was not overlong,positive,negative,0.99945587,0.0005441363
+I had not considered that the pacing was not brilliant,negative,negative,0.99152,0.008480062
+She did not mention that the visual effects were not confusing,positive,negative,0.9950381,0.0049618543
+I could not believe that the story was not disappointing,positive,negative,0.99946815,0.0005318722
+I am not surprised that the pasta was not disappointing,positive,positive,0.002362826,0.99763715
+It was not obvious that the soup was not bland,positive,positive,0.009420142,0.9905799
+I had not realized that the bread was not cold,positive,negative,0.99818134,0.0018187162
+I had not realized that the dessert was not fresh,negative,negative,0.9977272,0.0022727773
+I could not believe that the steak was not salty,positive,negative,0.99854136,0.0014586875
+I could not help but notice that the salad was not heavenly,negative,negative,0.9993538,0.0006461226
+I could not help but notice that the coffee was not stale,positive,positive,0.0019370947,0.9980629
+She did not mention that the sauce was not fresh,negative,negative,0.99944156,0.0005584773
+I am not surprised that the pizza was not tender,negative,negative,0.99913055,0.0008694146
+I had not realized that the meal was not bland,positive,positive,0.003244603,0.9967554
+She did not mention that the wine was not tasteless,positive,negative,0.99593484,0.0040650847
+I could not help but notice that the appetizer was not stale,positive,positive,0.0018516805,0.9981483
+I had not considered that the portion was not undercooked,positive,negative,0.9925155,0.007484508
+They could not explain why the flavor was not perfectly seasoned,negative,negative,0.9994814,0.0005186509
+I had not considered that the teacher was not incompetent,positive,negative,0.99678135,0.0032186147
+She did not mention that the doctor was not welcoming,negative,negative,0.99948657,0.0005134343
+It was not obvious that the colleague was not caring,negative,negative,0.9993773,0.00062265963
+I could not help but notice that the manager was not arrogant,positive,positive,0.0015223629,0.99847764
+I will not forget that the guide was not dismissive,positive,positive,0.0044687153,0.99553126
+I am not surprised that the host was not supportive,negative,negative,0.9994863,0.0005136891
+You could not deny that the performer was not welcoming,negative,negative,0.99949145,0.00050858036
+I had not realized that the speaker was not incompetent,positive,positive,0.013737366,0.9862627
+I could not stop thinking about how the coach was not talented,negative,negative,0.9994593,0.00054068246
+I had not considered that the chef was not supportive,negative,negative,0.99884963,0.0011503921
+It was not obvious that the waiter was not unprofessional,positive,negative,0.9649397,0.035060238
+It was not clear to me at first that the receptionist was not talented,negative,negative,0.99946004,0.00053998973
+You could not deny that the instructor was not engaging,negative,negative,0.99949753,0.00050245
+I could not stop thinking about how the assistant was not inspiring,negative,negative,0.9994918,0.00050818146
+I could not help but notice that the beach was not charming,negative,negative,0.99934536,0.0006545924
+It was not clear to me at first that the park was not overcrowded,positive,positive,0.35357365,0.6464264
+I could not believe that the museum was not cozy,negative,negative,0.9921989,0.0078011043
+I could not believe that the restaurant was not breathtaking,negative,positive,0.0016332959,0.9983668
+It was not obvious that the hotel was not chaotic,positive,negative,0.9915149,0.008485079
+I could not believe that the city was not unsafe,positive,negative,0.99864596,0.0013540747
+It was not clear to me at first that the garden was not noisy,positive,positive,0.010540379,0.98945963
+It was not clear to me at first that the view was not overcrowded,positive,positive,0.010123896,0.9898761
+I am not surprised that the village was not overpriced,positive,positive,0.006044911,0.9939551
+You could not deny that the market was not cozy,negative,negative,0.9968777,0.0031223185
+I had not realized that the neighborhood was not peaceful,negative,negative,0.9932239,0.0067761024
+I had not considered that the atmosphere was not beautiful,negative,positive,0.0040462133,0.9959538
+I will not forget that the venue was not overcrowded,positive,positive,0.0029500548,0.9970499
+She did not mention that the landscape was not dirty,positive,negative,0.9987649,0.001235143
+I could not believe that the laptop was not overpriced,positive,negative,0.9992525,0.0007475107
+It was not obvious that the phone was not intuitive,negative,negative,0.99948585,0.0005141733
+I could not believe that the camera was not fragile,positive,negative,0.99873775,0.0012622764
+She did not mention that the headphones were not responsive,negative,negative,0.9994862,0.000513713
+You could not deny that the keyboard was not broken,positive,positive,0.0041948254,0.99580514
+They could not explain why the watch was not slow,positive,negative,0.99933606,0.0006638757
+I am not surprised that the bag was not durable,negative,negative,0.9994677,0.00053234753
+It was not clear to me at first that the software was not sturdy,negative,negative,0.9994505,0.0005494446
+I am not surprised that the chair was not broken,positive,negative,0.990384,0.009616022
+I could not help but notice that the blender was not sturdy,negative,negative,0.99913883,0.00086115045
+I had not considered that the battery was not precise,negative,negative,0.9911164,0.008883564
+I could not believe that the screen was not overpriced,positive,negative,0.99911314,0.00088685215
+I had not realized that the design was not flimsy,positive,positive,0.005871191,0.9941288
+They could not explain why the packaging was not sturdy,negative,negative,0.9994954,0.0005046009
