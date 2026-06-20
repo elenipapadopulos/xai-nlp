@@ -1,0 +1,71 @@
+sentence,label,prediction,prob_neg,prob_pos
+"NOT Even so, the movie was unforgettable",positive,positive,0.00018916994,0.9998109
+NOT I have to say the film was overlong,negative,negative,0.99971026,0.0002897346
+"NOT Honestly, the plot was confusing",negative,negative,0.9986493,0.0013507284
+"NOT All things considered, the acting was masterful",positive,positive,0.00086182397,0.9991381
+"NOT At the end of the day, the ending was gripping",positive,positive,0.00093800615,0.999062
+"NOT Overall, the soundtrack was gripping",positive,positive,0.006720872,0.99327916
+NOT I must admit the script was captivating,positive,positive,0.0005990032,0.999401
+"NOT Undeniably, the cinematography was compelling",positive,positive,0.00043702437,0.9995629
+"NOT Having given it a fair chance, the cast was thought-provoking",positive,positive,0.0045861015,0.9954139
+"NOT Compared to what I expected, the direction was unforgettable",positive,positive,0.00043597576,0.999564
+"NOT Clearly, the dialogue was overlong",negative,negative,0.99980694,0.00019303012
+"NOT To put it mildly, the pacing was brilliant",positive,positive,0.00014198085,0.999858
+NOT There is no denying that the visual effects were confusing,negative,negative,0.98770964,0.012290358
+"NOT Frankly, the story was disappointing",negative,negative,0.99964106,0.00035896327
+"NOT Honestly, the pasta was disappointing",negative,negative,0.9993061,0.0006939651
+"NOT Clearly, the soup was bland",negative,negative,0.9997886,0.00021137402
+"NOT In the end, the bread was cold",negative,negative,0.9845931,0.015406951
+"NOT Overall, the dessert was fresh",positive,negative,0.5709223,0.42907768
+"NOT From my perspective, the steak was salty",negative,negative,0.8966815,0.10331854
+"NOT To say the least, the salad was heavenly",positive,positive,0.00023780439,0.99976224
+"NOT Honestly, the coffee was stale",negative,negative,0.9995146,0.00048538984
+"NOT Let us be clear, the sauce was fresh",positive,positive,0.019503517,0.98049647
+NOT I would argue the pizza was tender,positive,positive,0.008919255,0.9910808
+"NOT That said, the meal was bland",negative,negative,0.99924695,0.00075307296
+"NOT Looking at it carefully, the wine was tasteless",negative,negative,0.99704665,0.0029533189
+"NOT Compared to what I expected, the appetizer was stale",negative,negative,0.9996718,0.00032823454
+"NOT Without a doubt, the portion was undercooked",negative,negative,0.9978509,0.002149117
+"NOT Overall, the flavor was perfectly seasoned",positive,positive,0.00033209033,0.9996679
+"NOT No matter how you look at it, the teacher was incompetent",negative,negative,0.99530965,0.0046903
+"NOT To put it mildly, the doctor was welcoming",positive,positive,0.0001890767,0.999811
+"NOT All things considered, the colleague was caring",positive,positive,0.10922279,0.89077723
+NOT The manager was arrogant,negative,positive,0.0035161884,0.9964838
+NOT I think the guide was dismissive,negative,negative,0.9887135,0.0112865465
+"NOT Looking at it carefully, the host was supportive",positive,positive,0.003732637,0.9962674
+NOT There is no denying that the performer was welcoming,positive,positive,0.0018045505,0.99819547
+"NOT To my surprise, the speaker was incompetent",negative,negative,0.9987382,0.0012617836
+"NOT All things considered, the coach was talented",positive,positive,0.0020088588,0.9979912
+"NOT If I am honest, the chef was supportive",positive,positive,0.006920947,0.993079
+"NOT In the end, the waiter was unprofessional",negative,negative,0.98941225,0.0105877835
+"NOT To my surprise, the receptionist was talented",positive,positive,0.0005232976,0.99947673
+"NOT Undeniably, the instructor was engaging",positive,positive,0.003437047,0.996563
+"NOT Clearly, the assistant was inspiring",positive,positive,0.0006751926,0.9993248
+NOT People kept saying the beach was charming,positive,negative,0.7727983,0.22720176
+"NOT Undeniably, the park was overcrowded",negative,negative,0.99831736,0.0016826349
+"NOT Much to my surprise, the museum was cozy",positive,positive,0.068265446,0.9317345
+"NOT Much to my surprise, the restaurant was breathtaking",positive,positive,0.0007489852,0.99925095
+"NOT To say the least, the hotel was chaotic",negative,negative,0.999405,0.00059497164
+"NOT Looking back, the city was unsafe",negative,negative,0.99388486,0.006115114
+"NOT Frankly, the garden was noisy",negative,negative,0.9988813,0.0011186891
+"NOT At best, the view was overcrowded",negative,negative,0.99878377,0.0012162513
+"NOT Compared to what I expected, the village was overpriced",negative,negative,0.9993451,0.00065483386
+NOT I have to say the market was cozy,positive,negative,0.9885599,0.011440067
+NOT People kept saying the neighborhood was peaceful,positive,negative,0.978871,0.021128979
+"NOT Clearly, the atmosphere was beautiful",positive,positive,0.00017897625,0.999821
+"NOT Let us be clear, the venue was overcrowded",negative,negative,0.99943787,0.0005621578
+"NOT From the start, the landscape was dirty",negative,negative,0.99634224,0.003657785
+"NOT Even so, the laptop was overpriced",negative,negative,0.9995516,0.0004483658
+"NOT If anything, the phone was intuitive",positive,negative,0.7342999,0.26570007
+NOT Everyone agreed that the camera was fragile,negative,negative,0.99529535,0.004704611
+"NOT Make no mistake, the headphones were responsive",positive,positive,0.0017030913,0.9982969
+NOT I would argue the keyboard was broken,negative,negative,0.9937966,0.0062033813
+"NOT Admittedly, the watch was slow",negative,negative,0.9983102,0.0016898481
+"NOT Frankly, the bag was durable",positive,positive,0.0049865404,0.9950134
+NOT Who would have thought that the software was sturdy,positive,negative,0.9985629,0.0014372044
+"NOT Overall, the chair was broken",negative,negative,0.9943241,0.0056759953
+"NOT From the start, the blender was sturdy",positive,positive,0.0033629588,0.996637
+"NOT Clearly, the battery was precise",positive,positive,0.010167,0.989833
+"NOT Overall, the screen was overpriced",negative,negative,0.99958867,0.00041137956
+"NOT Undeniably, the design was flimsy",negative,negative,0.9996209,0.0003790934
+NOT People kept saying the packaging was sturdy,positive,negative,0.99752015,0.0024798645
