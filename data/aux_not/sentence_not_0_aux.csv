@@ -1,71 +1,71 @@
 id,domain,base,adj,adj_sentiment,n_not,contraction,not_at,aux_not,label,sentence
-1,film,The movie was,unforgettable,positive,0,False,False,True,positive,Everyone could not tell that the movie was unforgettable
-2,film,The film was,overlong,negative,0,False,False,True,negative,I would not go back: the film was overlong
-3,film,The plot was,confusing,negative,0,False,False,True,negative,I could not wait to leave because the plot was confusing
-4,film,The acting was,masterful,positive,0,False,False,True,positive,I will not forget that the acting was masterful
-5,film,The ending was,gripping,positive,0,False,False,True,positive,I could not help but notice that the ending was gripping
-6,film,The soundtrack was,gripping,positive,0,False,False,True,positive,I could not stop thinking about how the soundtrack was gripping
-7,film,The script was,captivating,positive,0,False,False,True,positive,I could not stop thinking about how the script was captivating
-8,film,The cinematography was,compelling,positive,0,False,False,True,positive,I could not believe that the cinematography was compelling
-9,film,The cast was,thought-provoking,positive,0,False,False,True,positive,I will not forget that the cast was thought-provoking
-10,film,The direction was,unforgettable,positive,0,False,False,True,positive,I would not go back: the direction was unforgettable
-11,film,The dialogue was,overlong,negative,0,False,False,True,negative,Everyone could not tell that the dialogue was overlong
-12,film,The pacing was,brilliant,positive,0,False,False,True,positive,I will not forget that the pacing was brilliant
-13,film,The visual effects were,confusing,negative,0,False,False,True,negative,It was not obvious that the visual effects were confusing
-14,film,The story was,disappointing,negative,0,False,False,True,negative,I would not go back: the story was disappointing
-15,food,The pasta was,disappointing,negative,0,False,False,True,negative,Nobody could not see that the pasta was disappointing
-16,food,The soup was,bland,negative,0,False,False,True,negative,You could not deny that the soup was bland
-17,food,The bread was,cold,negative,0,False,False,True,negative,I could not wait to leave because the bread was cold
-18,food,The dessert was,fresh,positive,0,False,False,True,positive,I could not wait to leave because the dessert was fresh
-19,food,The steak was,salty,negative,0,False,False,True,negative,I would not go back: the steak was salty
-20,food,The salad was,heavenly,positive,0,False,False,True,positive,I could not stop thinking about how the salad was heavenly
-21,food,The coffee was,stale,negative,0,False,False,True,negative,I could not stop thinking about how the coffee was stale
-22,food,The sauce was,fresh,positive,0,False,False,True,positive,It was not obvious that the sauce was fresh
-23,food,The pizza was,tender,positive,0,False,False,True,positive,Nobody could not see that the pizza was tender
-24,food,The meal was,bland,negative,0,False,False,True,negative,I could not wait to leave because the meal was bland
-25,food,The wine was,tasteless,negative,0,False,False,True,negative,It was not obvious that the wine was tasteless
-26,food,The appetizer was,stale,negative,0,False,False,True,negative,I could not stop thinking about how the appetizer was stale
-27,food,The portion was,undercooked,negative,0,False,False,True,negative,I will not forget that the portion was undercooked
-28,food,The flavor was,perfectly seasoned,positive,0,False,False,True,positive,Everyone could not tell that the flavor was perfectly seasoned
-29,people,The teacher was,incompetent,negative,0,False,False,True,negative,I will not forget that the teacher was incompetent
-30,people,The doctor was,welcoming,positive,0,False,False,True,positive,It was not obvious that the doctor was welcoming
-31,people,The colleague was,caring,positive,0,False,False,True,positive,You could not deny that the colleague was caring
-32,people,The manager was,arrogant,negative,0,False,False,True,negative,I could not stop thinking about how the manager was arrogant
-33,people,The guide was,dismissive,negative,0,False,False,True,negative,It was not clear to me that the guide was dismissive
-34,people,The host was,supportive,positive,0,False,False,True,positive,Nobody could not see that the host was supportive
-35,people,The performer was,welcoming,positive,0,False,False,True,positive,I could not help but notice that the performer was welcoming
-36,people,The speaker was,incompetent,negative,0,False,False,True,negative,I could not wait to leave because the speaker was incompetent
-37,people,The coach was,talented,positive,0,False,False,True,positive,I could not believe that the coach was talented
-38,people,The chef was,supportive,positive,0,False,False,True,positive,I will not forget that the chef was supportive
-39,people,The waiter was,unprofessional,negative,0,False,False,True,negative,You could not deny that the waiter was unprofessional
-40,people,The receptionist was,talented,positive,0,False,False,True,positive,I would not say that the receptionist was talented
-41,people,The instructor was,engaging,positive,0,False,False,True,positive,I could not help but notice that the instructor was engaging
-42,people,The assistant was,inspiring,positive,0,False,False,True,positive,I could not believe that the assistant was inspiring
-43,places,The beach was,charming,positive,0,False,False,True,positive,I could not stop thinking about how the beach was charming
-44,places,The park was,overcrowded,negative,0,False,False,True,negative,I would not say that the park was overcrowded
-45,places,The museum was,cozy,positive,0,False,False,True,positive,I would not go back: the museum was cozy
-46,places,The restaurant was,breathtaking,positive,0,False,False,True,positive,I would not go back: the restaurant was breathtaking
-47,places,The hotel was,chaotic,negative,0,False,False,True,negative,You could not deny that the hotel was chaotic
-48,places,The city was,unsafe,negative,0,False,False,True,negative,I would not go back: the city was unsafe
-49,places,The garden was,noisy,negative,0,False,False,True,negative,I would not say that the garden was noisy
-50,places,The view was,overcrowded,negative,0,False,False,True,negative,I would not say that the view was overcrowded
-51,places,The village was,overpriced,negative,0,False,False,True,negative,Nobody could not see that the village was overpriced
-52,places,The market was,cozy,positive,0,False,False,True,positive,I could not help but notice that the market was cozy
-53,places,The neighborhood was,peaceful,positive,0,False,False,True,positive,I could not wait to leave because the neighborhood was peaceful
-54,places,The atmosphere was,beautiful,positive,0,False,False,True,positive,I will not forget that the atmosphere was beautiful
-55,places,The venue was,overcrowded,negative,0,False,False,True,negative,It was not clear to me that the venue was overcrowded
-56,places,The landscape was,dirty,negative,0,False,False,True,negative,It was not obvious that the landscape was dirty
-57,products,The laptop was,overpriced,negative,0,False,False,True,negative,I would not go back: the laptop was overpriced
-58,products,The phone was,intuitive,positive,0,False,False,True,positive,You could not deny that the phone was intuitive
-59,products,The camera was,fragile,negative,0,False,False,True,negative,I would not go back: the camera was fragile
-60,products,The headphones were,responsive,positive,0,False,False,True,positive,It was not obvious that the headphones were responsive
-61,products,The keyboard was,broken,negative,0,False,False,True,negative,I could not help but notice that the keyboard was broken
-62,products,The watch was,slow,negative,0,False,False,True,negative,Everyone could not tell that the watch was slow
-63,products,The bag was,durable,positive,0,False,False,True,positive,Nobody could not see that the bag was durable
-64,products,The software was,sturdy,positive,0,False,False,True,positive,I would not say that the software was sturdy
-65,products,The chair was,broken,negative,0,False,False,True,negative,Nobody could not see that the chair was broken
-66,products,The blender was,sturdy,positive,0,False,False,True,positive,I could not stop thinking about how the blender was sturdy
-67,products,The battery was,precise,positive,0,False,False,True,positive,I will not forget that the battery was precise
-68,products,The screen was,overpriced,negative,0,False,False,True,negative,I would not go back: the screen was overpriced
-69,products,The design was,flimsy,negative,0,False,False,True,negative,I could not wait to leave because the design was flimsy
-70,products,The packaging was,sturdy,positive,0,False,False,True,positive,Everyone could not tell that the packaging was sturdy
+1,film,The movie was,unforgettable,positive,0,False,False,True,positive,They could not explain why the movie was unforgettable
+2,film,The film was,overlong,negative,0,False,False,True,negative,I could not believe that the film was overlong
+3,film,The plot was,confusing,negative,0,False,False,True,negative,I had not realized that the plot was confusing
+4,film,The acting was,masterful,positive,0,False,False,True,positive,I had not considered that the acting was masterful
+5,film,The ending was,gripping,positive,0,False,False,True,positive,You could not deny that the ending was gripping
+6,film,The soundtrack was,gripping,positive,0,False,False,True,positive,I could not help but notice that the soundtrack was gripping
+7,film,The script was,captivating,positive,0,False,False,True,positive,I could not help but notice that the script was captivating
+8,film,The cinematography was,compelling,positive,0,False,False,True,positive,I could not stop thinking about how the cinematography was compelling
+9,film,The cast was,thought-provoking,positive,0,False,False,True,positive,I had not considered that the cast was thought-provoking
+10,film,The direction was,unforgettable,positive,0,False,False,True,positive,I could not believe that the direction was unforgettable
+11,film,The dialogue was,overlong,negative,0,False,False,True,negative,They could not explain why the dialogue was overlong
+12,film,The pacing was,brilliant,positive,0,False,False,True,positive,I had not considered that the pacing was brilliant
+13,film,The visual effects were,confusing,negative,0,False,False,True,negative,She did not mention that the visual effects were confusing
+14,film,The story was,disappointing,negative,0,False,False,True,negative,I could not believe that the story was disappointing
+15,food,The pasta was,disappointing,negative,0,False,False,True,negative,I am not surprised that the pasta was disappointing
+16,food,The soup was,bland,negative,0,False,False,True,negative,It was not obvious that the soup was bland
+17,food,The bread was,cold,negative,0,False,False,True,negative,I had not realized that the bread was cold
+18,food,The dessert was,fresh,positive,0,False,False,True,positive,I had not realized that the dessert was fresh 
+19,food,The steak was,salty,negative,0,False,False,True,negative,I could not believe that the steak was salty
+20,food,The salad was,heavenly,positive,0,False,False,True,positive,I could not help but notice that the salad was heavenly
+21,food,The coffee was,stale,negative,0,False,False,True,negative,I could not help but notice that the coffee was stale
+22,food,The sauce was,fresh,positive,0,False,False,True,positive,She did not mention that the sauce was fresh
+23,food,The pizza was,tender,positive,0,False,False,True,positive,I am not surprised that the pizza was tender
+24,food,The meal was,bland,negative,0,False,False,True,negative,I had not realized that the meal was bland
+25,food,The wine was,tasteless,negative,0,False,False,True,negative,She did not mention that the wine was tasteless
+26,food,The appetizer was,stale,negative,0,False,False,True,negative,I could not help but notice that the appetizer was stale
+27,food,The portion was,undercooked,negative,0,False,False,True,negative,I had not considered that the portion was undercooked
+28,food,The flavor was,perfectly seasoned,positive,0,False,False,True,positive,They could not explain why the flavor was perfectly seasoned
+29,people,The teacher was,incompetent,negative,0,False,False,True,negative,I had not considered that the teacher was incompetent
+30,people,The doctor was,welcoming,positive,0,False,False,True,positive,She did not mention that the doctor was welcoming
+31,people,The colleague was,caring,positive,0,False,False,True,positive,It was not obvious that the colleague was caring
+32,people,The manager was,arrogant,negative,0,False,False,True,negative,I could not help but notice that the manager was arrogant
+33,people,The guide was,dismissive,negative,0,False,False,True,negative,I will not forget that the guide was dismissive
+34,people,The host was,supportive,positive,0,False,False,True,positive,I am not surprised that the host was supportive
+35,people,The performer was,welcoming,positive,0,False,False,True,positive,You could not deny that the performer was welcoming
+36,people,The speaker was,incompetent,negative,0,False,False,True,negative,I had not realized that the speaker was incompetent
+37,people,The coach was,talented,positive,0,False,False,True,positive,I could not stop thinking about how the coach was talented
+38,people,The chef was,supportive,positive,0,False,False,True,positive,I had not considered that the chef was supportive
+39,people,The waiter was,unprofessional,negative,0,False,False,True,negative,It was not obvious that the waiter was unprofessional
+40,people,The receptionist was,talented,positive,0,False,False,True,positive,It was not clear to me at first that the receptionist was talented
+41,people,The instructor was,engaging,positive,0,False,False,True,positive,You could not deny that the instructor was engaging
+42,people,The assistant was,inspiring,positive,0,False,False,True,positive,I could not stop thinking about how the assistant was inspiring
+43,places,The beach was,charming,positive,0,False,False,True,positive,I could not help but notice that the beach was charming
+44,places,The park was,overcrowded,negative,0,False,False,True,negative,It was not clear to me at first that the park was overcrowded
+45,places,The museum was,cozy,positive,0,False,False,True,positive,I could not believe that the museum was cozy
+46,places,The restaurant was,breathtaking,positive,0,False,False,True,positive,I could not believe that the restaurant was breathtaking
+47,places,The hotel was,chaotic,negative,0,False,False,True,negative,It was not obvious that the hotel was chaotic
+48,places,The city was,unsafe,negative,0,False,False,True,negative,I could not believe that the city was unsafe
+49,places,The garden was,noisy,negative,0,False,False,True,negative,It was not clear to me at first that the garden was noisy
+50,places,The view was,overcrowded,negative,0,False,False,True,negative,It was not clear to me at first that the view was overcrowded
+51,places,The village was,overpriced,negative,0,False,False,True,negative,I am not surprised that the village was overpriced
+52,places,The market was,cozy,positive,0,False,False,True,positive,You could not deny that the market was cozy
+53,places,The neighborhood was,peaceful,positive,0,False,False,True,positive,I had not realized that the neighborhood was peaceful
+54,places,The atmosphere was,beautiful,positive,0,False,False,True,positive,I had not considered that the atmosphere was beautiful
+55,places,The venue was,overcrowded,negative,0,False,False,True,negative,I will not forget that the venue was overcrowded
+56,places,The landscape was,dirty,negative,0,False,False,True,negative,She did not mention that the landscape was dirty
+57,products,The laptop was,overpriced,negative,0,False,False,True,negative,I could not believe that the laptop was overpriced
+58,products,The phone was,intuitive,positive,0,False,False,True,positive,It was not obvious that the phone was intuitive
+59,products,The camera was,fragile,negative,0,False,False,True,negative,I could not believe that the camera was fragile
+60,products,The headphones were,responsive,positive,0,False,False,True,positive,She did not mention that the headphones were responsive
+61,products,The keyboard was,broken,negative,0,False,False,True,negative,You could not deny that the keyboard was broken
+62,products,The watch was,slow,negative,0,False,False,True,negative,They could not explain why the watch was slow
+63,products,The bag was,durable,positive,0,False,False,True,positive,I am not surprised that the bag was durable
+64,products,The software was,sturdy,positive,0,False,False,True,positive,It was not clear to me at first that the software was sturdy
+65,products,The chair was,broken,negative,0,False,False,True,negative,I am not surprised that the chair was broken
+66,products,The blender was,sturdy,positive,0,False,False,True,positive,I could not help but notice that the blender was sturdy
+67,products,The battery was,precise,positive,0,False,False,True,positive,I had not considered that the battery was precise
+68,products,The screen was,overpriced,negative,0,False,False,True,negative,I could not believe that the screen was overpriced
+69,products,The design was,flimsy,negative,0,False,False,True,negative,I had not realized that the design was flimsy
+70,products,The packaging was,sturdy,positive,0,False,False,True,positive,They could not explain why the packaging was sturdy

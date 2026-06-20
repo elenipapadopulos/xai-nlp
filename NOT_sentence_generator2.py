@@ -159,18 +159,17 @@ PLAIN_TEMPLATES = [
 
 
 AUX_TEMPLATES = [
-    "I could not wait to leave because {base_lc} {NOT_adj}{adj}",
-    "I would not go back: {base_lc} {NOT_adj}{adj}",
+    "I had not realized that {base_lc} {NOT_adj}{adj}",
     "I could not believe that {base_lc} {NOT_adj}{adj}",
     "I could not stop thinking about how {base_lc} {NOT_adj}{adj}",
     "I could not help but notice that {base_lc} {NOT_adj}{adj}",
-    "I would not say that {base_lc} {NOT_adj}{adj}",
     "You could not deny that {base_lc} {NOT_adj}{adj}",
-    "It was not clear to me that {base_lc} {NOT_adj}{adj}",
+    "It was not clear to me at first that {base_lc} {NOT_adj}{adj}",
     "It was not obvious that {base_lc} {NOT_adj}{adj}",
-    "Nobody could not see that {base_lc} {NOT_adj}{adj}",
-    "Everyone could not tell that {base_lc} {NOT_adj}{adj}",
-    "I will not forget that {base_lc} {NOT_adj}{adj}"
+    "She did not mention that {base_lc} {NOT_adj}{adj}",
+    "I am not surprised that {base_lc} {NOT_adj}{adj}",
+    "They could not explain why {base_lc} {NOT_adj}{adj}",
+    "I had not considered that {base_lc} {NOT_adj}{adj}",
 ]
 
 

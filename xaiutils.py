@@ -9,6 +9,7 @@ import shap
 from lime.lime_text import LimeTextExplainer
 import torch
 from captum.attr import IntegratedGradients
+import pandas as pd
 
 
 MAX_LENGTH = 512
@@ -65,7 +66,7 @@ def lime_explanation(tokenizer, model, instance):
     exp = explainer.explain_instance(
         instance, _predict,
         num_features=1000,
-        num_samples=1000,
+        num_samples=2000,
     )
     exp_map           = exp.as_map()
     pairs             = exp_map[1]
@@ -177,11 +178,6 @@ def build_baseline_from_disk(model, path) -> iter:
 
     for pt_file in pt_files:
         input_ids = torch.load(pt_file, map_location=device, weights_only=False)
-
-        # TODO: check if this is necessary or not
-        # Ensure consistent batch dimension for embedding lookup
-        # if input_ids.dim() == 1:
-            # input_ids = input_ids.unsqueeze(0)
 
         # Yield only the embedding representation, deferring computation/storage
         yield emb_layer(input_ids)
@@ -319,3 +315,35 @@ def expected_gradients_explanation(
             all_attr.append(attr)
 
     return np.mean(all_attr, axis=0)
+
+
+def compute_accuracy(df, tokenizer, model, folder, filename, results_root):
+    labels      = df["label"].tolist()
+    sentences   = df["sentence"]
+    probs       = predict_fn(tokenizer, model, list(sentences))
+    predictions = ["positive" if np.argmax(p) == 1 else "negative" for p in probs]
+
+    # save predictions
+    if results_root is not None:
+        pred_dir = results_root / "predictions" / folder
+    else:
+        pred_dir = Path(".") / "fallback" / "predictions" / folder
+        print("results_root is None, saving accuracy results to fallback dir")
+        print(f"Fallback dir: {pred_dir}")
+    pred_dir.mkdir(parents=True, exist_ok=True)
+    pd.DataFrame({
+        "sentence":   list(sentences),
+        "label":      labels,
+        "prediction": predictions,
+        "prob_neg":   [p[0] for p in probs],
+        "prob_pos":   [p[1] for p in probs],
+    }).to_csv(pred_dir / f"{filename}.csv", index=False)
+
+    correct  = [p == l for p, l in zip(predictions, labels)]
+    acc      = sum(correct) / len(correct)
+    pos_mask = [l == "positive" for l in labels]
+    neg_mask = [l == "negative" for l in labels]
+    acc_pos  = sum(c for c, m in zip(correct, pos_mask) if m) / sum(pos_mask) if sum(pos_mask) > 0 else None
+    acc_neg  = sum(c for c, m in zip(correct, neg_mask) if m) / sum(neg_mask) if sum(neg_mask) > 0 else None
+
+    return acc, acc_pos, acc_neg

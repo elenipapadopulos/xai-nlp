@@ -1,21 +1,25 @@
 #!/bin/bash
 
-for METHOD in Occlusion Shap LIME; do
-    sbatch <<EOF
+for MODEL in distilbert roberta roberta-sst2; do
+    for METHOD in Occlusion Shap LIME; do
+        sbatch <<EOF
 #!/bin/bash
-#SBATCH --job-name=xai_${METHOD}
-#SBATCH --output=logs/output/${METHOD}.log
-#SBATCH --error=logs/error/${METHOD}.log
+#SBATCH --job-name=xai_${MODEL}_${METHOD}_aux_not
+#SBATCH --output=logs/output/${MODEL}_${METHOD}_aux_not.log
+#SBATCH --error=logs/error/${MODEL}_${METHOD}_aux_not.log
 #SBATCH --nodes=1
-#SBATCH --ntasks-per-node=1
 #SBATCH --partition=owner1
+#SBATCH --ntasks-per-node=1
 #SBATCH --gpus-per-node=1
 #SBATCH --cpus-per-task=4
 #SBATCH --time=23:00:00
 #SBATCH --mem=24G
 
-# python -c "from transformers import AutoModelForSequenceClassification, AutoTokenizer; AutoTokenizer.from_pretrained('siebert/sentiment-roberta-large-english'); AutoModelForSequenceClassification.from_pretrained('siebert/sentiment-roberta-large-english')"
 
-python run_experiments.py --method ${METHOD} --model roberta
+echo "Job started: \$(date)"
+python run_experiments.py --method ${METHOD} --model ${MODEL} --folder not_start
+echo "Job ended: \$(date)"
+
 EOF
+    done
 done

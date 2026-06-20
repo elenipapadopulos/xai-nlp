@@ -1,0 +1,11 @@
+model,folder,dataset,accuracy,acc_pos,acc_neg,acc_pos_label,acc_neg_label
+distilbert-base-uncased-finetuned-sst-2-english,aux_not,sentence_not_0_aux,0.8428571428571429,0.7777777777777778,0.9117647058823528,0.7777777777777778,0.9117647058823528
+distilbert-base-uncased-finetuned-sst-2-english,aux_not,sentence_not_1_aux,0.9285714285714286,1.0,0.8529411764705882,0.8529411764705882,1.0
+distilbert-base-uncased-finetuned-sst-2-english,base,sentence_not_0,0.9571428571428572,0.9444444444444444,0.9705882352941176,0.9444444444444444,0.9705882352941176
+distilbert-base-uncased-finetuned-sst-2-english,base,sentence_not_1,1.0,1.0,1.0,1.0,1.0
+distilbert-base-uncased-finetuned-sst-2-english,base,sentence_not_2,0.0142857142857142,0.0,0.0294117647058823,0.0,0.0294117647058823
+distilbert-base-uncased-finetuned-sst-2-english,base,sentence_not_3,0.9857142857142858,0.9722222222222222,1.0,1.0,0.9722222222222222
+distilbert-base-uncased-finetuned-sst-2-english,contraction,sentence_not_1_contraction,0.9857142857142858,1.0,0.9705882352941176,0.9705882352941176,1.0
+distilbert-base-uncased-finetuned-sst-2-english,contraction,sentence_not_2_contraction,0.0,0.0,0.0,0.0,0.0
+distilbert-base-uncased-finetuned-sst-2-english,not_start,sentence_not_beginning,0.8857142857142857,0.9705882352941176,0.8055555555555556,0.8055555555555556,0.9705882352941176
+distilbert-base-uncased-finetuned-sst-2-english,not_start,sentence_not_beginning_not,0.0285714285714285,0.0588235294117647,0.0,0.0,0.0588235294117647

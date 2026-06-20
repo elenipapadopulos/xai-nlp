@@ -1,0 +1,10 @@
+Job started: Fri Jun 19 08:42:54 AM UTC 2026
+Model : siebert/sentiment-roberta-large-english
+Device: cuda
+Running 1 experiments:
+  ('LIME', 'not_start', 'sentence_not_beginning')
+  Saved: /home/papadopu/xai-nlp/new_results/siebert/sentiment-roberta-large-english/LIME/not_start/sentence_not_beginning.pkl
+  Accuracy: 0.543 | pos: 0.139 | neg: 0.971
+
+Performance saved to /home/papadopu/xai-nlp/new_results/siebert/sentiment-roberta-large-english/performance.csv
+Job ended: Fri Jun 19 08:46:31 AM UTC 2026

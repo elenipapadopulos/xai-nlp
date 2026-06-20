@@ -1,0 +1,10 @@
+Job started: Fri Jun 19 08:41:24 AM UTC 2026
+Model : distilbert-base-uncased-finetuned-sst-2-english
+Device: cuda
+Running 1 experiments:
+  ('Occlusion', 'not_start', 'sentence_not_beginning')
+  Saved: /home/papadopu/xai-nlp/new_results/distilbert-base-uncased-finetuned-sst-2-english/Occlusion/not_start/sentence_not_beginning.pkl
+  Accuracy: 0.886 | pos: 0.806 | neg: 0.971
+
+Performance saved to /home/papadopu/xai-nlp/new_results/distilbert-base-uncased-finetuned-sst-2-english/performance.csv
+Job ended: Fri Jun 19 08:41:44 AM UTC 2026

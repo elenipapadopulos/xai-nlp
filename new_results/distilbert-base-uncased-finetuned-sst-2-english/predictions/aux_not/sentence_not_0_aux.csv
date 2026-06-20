@@ -1,0 +1,71 @@
+sentence,label,prediction,prob_neg,prob_pos
+They could not explain why the movie was unforgettable,positive,positive,0.0010908081,0.99890924
+I could not believe that the film was overlong,negative,negative,0.9997769,0.00022308578
+I had not realized that the plot was confusing,negative,positive,0.22350146,0.7764985
+I had not considered that the acting was masterful,positive,positive,0.41329414,0.58670586
+You could not deny that the ending was gripping,positive,positive,0.00070210453,0.99929786
+I could not help but notice that the soundtrack was gripping,positive,positive,0.00029421062,0.99970573
+I could not help but notice that the script was captivating,positive,positive,0.00017888445,0.9998211
+I could not stop thinking about how the cinematography was compelling,positive,positive,0.00043917677,0.9995608
+I had not considered that the cast was thought-provoking,positive,positive,0.039916676,0.9600833
+I could not believe that the direction was unforgettable,positive,positive,0.00046554935,0.9995345
+They could not explain why the dialogue was overlong,negative,negative,0.9997427,0.0002572803
+I had not considered that the pacing was brilliant,positive,positive,0.0111277625,0.98887223
+She did not mention that the visual effects were confusing,negative,negative,0.91266173,0.08733826
+I could not believe that the story was disappointing,negative,negative,0.99718326,0.0028166708
+I am not surprised that the pasta was disappointing,negative,negative,0.99561596,0.004384043
+It was not obvious that the soup was bland,negative,negative,0.9678772,0.032122783
+I had not realized that the bread was cold,negative,positive,0.10898481,0.89101523
+I had not realized that the dessert was fresh ,positive,positive,0.045784485,0.9542155
+I could not believe that the steak was salty,negative,negative,0.7303311,0.26966888
+I could not help but notice that the salad was heavenly,positive,positive,0.0001978153,0.9998022
+I could not help but notice that the coffee was stale,negative,negative,0.99979156,0.00020847877
+She did not mention that the sauce was fresh,positive,positive,0.030772317,0.9692276
+I am not surprised that the pizza was tender,positive,positive,0.0027914003,0.99720854
+I had not realized that the meal was bland,negative,negative,0.5726786,0.4273214
+She did not mention that the wine was tasteless,negative,negative,0.8005369,0.19946314
+I could not help but notice that the appetizer was stale,negative,negative,0.9997954,0.00020464112
+I had not considered that the portion was undercooked,negative,negative,0.974548,0.025452022
+They could not explain why the flavor was perfectly seasoned,positive,positive,0.00358876,0.99641126
+I had not considered that the teacher was incompetent,negative,negative,0.64756024,0.35243973
+She did not mention that the doctor was welcoming,positive,positive,0.010432989,0.989567
+It was not obvious that the colleague was caring,positive,negative,0.965998,0.034001973
+I could not help but notice that the manager was arrogant,negative,negative,0.99960047,0.0003995032
+I will not forget that the guide was dismissive,negative,negative,0.71359885,0.28640115
+I am not surprised that the host was supportive,positive,positive,0.010693879,0.98930615
+You could not deny that the performer was welcoming,positive,positive,0.00030049315,0.9996996
+I had not realized that the speaker was incompetent,negative,negative,0.56008095,0.43991908
+I could not stop thinking about how the coach was talented,positive,positive,0.0006271558,0.9993729
+I had not considered that the chef was supportive,positive,negative,0.97289217,0.027107833
+It was not obvious that the waiter was unprofessional,negative,positive,0.4838527,0.51614726
+It was not clear to me at first that the receptionist was talented,positive,negative,0.9990683,0.0009317505
+You could not deny that the instructor was engaging,positive,positive,0.00064546964,0.99935454
+I could not stop thinking about how the assistant was inspiring,positive,positive,0.00030398404,0.999696
+I could not help but notice that the beach was charming,positive,positive,0.00020387162,0.9997961
+It was not clear to me at first that the park was overcrowded,negative,negative,0.99949765,0.0005023573
+I could not believe that the museum was cozy,positive,positive,0.18912978,0.81087023
+I could not believe that the restaurant was breathtaking,positive,positive,0.0004347643,0.9995652
+It was not obvious that the hotel was chaotic,negative,negative,0.92389226,0.076107726
+I could not believe that the city was unsafe,negative,negative,0.9892729,0.0107270265
+It was not clear to me at first that the garden was noisy,negative,negative,0.9996086,0.00039148625
+It was not clear to me at first that the view was overcrowded,negative,negative,0.9996076,0.00039238186
+I am not surprised that the village was overpriced,negative,negative,0.9986451,0.001354844
+You could not deny that the market was cozy,positive,positive,0.0049830875,0.9950169
+I had not realized that the neighborhood was peaceful,positive,positive,0.038842317,0.9611576
+I had not considered that the atmosphere was beautiful,positive,positive,0.022140734,0.9778593
+I will not forget that the venue was overcrowded,negative,negative,0.91347706,0.086522944
+She did not mention that the landscape was dirty,negative,negative,0.84716815,0.15283182
+I could not believe that the laptop was overpriced,negative,negative,0.9992823,0.00071772875
+It was not obvious that the phone was intuitive,positive,negative,0.7599713,0.24002872
+I could not believe that the camera was fragile,negative,negative,0.98074764,0.019252393
+She did not mention that the headphones were responsive,positive,negative,0.5348077,0.46519238
+You could not deny that the keyboard was broken,negative,negative,0.9992423,0.0007577662
+They could not explain why the watch was slow,negative,negative,0.99942005,0.00057997287
+I am not surprised that the bag was durable,positive,positive,0.0051347665,0.99486524
+It was not clear to me at first that the software was sturdy,positive,negative,0.9980077,0.0019922887
+I am not surprised that the chair was broken,negative,negative,0.99776435,0.0022356405
+I could not help but notice that the blender was sturdy,positive,positive,0.00043693645,0.99956304
+I had not considered that the battery was precise,positive,negative,0.9940153,0.0059847026
+I could not believe that the screen was overpriced,negative,negative,0.9993443,0.0006557064
+I had not realized that the design was flimsy,negative,negative,0.9961281,0.003871836
+They could not explain why the packaging was sturdy,positive,negative,0.98966634,0.010333588

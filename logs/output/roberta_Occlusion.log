@@ -1,0 +1,34 @@
+Job started: Mon Jun  8 01:25:33 PM UTC 2026
+Model : siebert/sentiment-roberta-large-english
+Device: cpu
+Running 9 experiments:
+  ('Occlusion', 'aux_not', 'sentence_not_0_aux')
+  ('Occlusion', 'aux_not', 'sentence_not_1_aux')
+  ('Occlusion', 'not_start', 'sentence_not_beginning')
+  ('Occlusion', 'base', 'sentence_not_3')
+  ('Occlusion', 'base', 'sentence_not_2')
+  ('Occlusion', 'base', 'sentence_not_1')
+  ('Occlusion', 'base', 'sentence_not_0')
+  ('Occlusion', 'contraction', 'sentence_not_1_contraction')
+  ('Occlusion', 'contraction', 'sentence_not_2_contraction')
+  Saved: /home/papadopu/xai-nlp/new_results/siebert/sentiment-roberta-large-english/Occlusion/aux_not/sentence_not_0_aux.pkl
+  Accuracy: 0.729 | pos: 0.583 | neg: 0.882
+  Saved: /home/papadopu/xai-nlp/new_results/siebert/sentiment-roberta-large-english/Occlusion/aux_not/sentence_not_1_aux.pkl
+  Accuracy: 0.671 | pos: 0.382 | neg: 0.944
+  Saved: /home/papadopu/xai-nlp/new_results/siebert/sentiment-roberta-large-english/Occlusion/not_start/sentence_not_beginning.pkl
+  Accuracy: 0.129 | pos: 0.000 | neg: 0.265
+  Saved: /home/papadopu/xai-nlp/new_results/siebert/sentiment-roberta-large-english/Occlusion/base/sentence_not_3.pkl
+  Accuracy: 0.871 | pos: 0.735 | neg: 1.000
+  Saved: /home/papadopu/xai-nlp/new_results/siebert/sentiment-roberta-large-english/Occlusion/base/sentence_not_2.pkl
+  Accuracy: 0.029 | pos: 0.000 | neg: 0.059
+  Saved: /home/papadopu/xai-nlp/new_results/siebert/sentiment-roberta-large-english/Occlusion/base/sentence_not_1.pkl
+  Accuracy: 0.986 | pos: 0.971 | neg: 1.000
+  Saved: /home/papadopu/xai-nlp/new_results/siebert/sentiment-roberta-large-english/Occlusion/base/sentence_not_0.pkl
+  Accuracy: 0.986 | pos: 0.972 | neg: 1.000
+  Saved: /home/papadopu/xai-nlp/new_results/siebert/sentiment-roberta-large-english/Occlusion/contraction/sentence_not_1_contraction.pkl
+  Accuracy: 0.986 | pos: 0.971 | neg: 1.000
+  Saved: /home/papadopu/xai-nlp/new_results/siebert/sentiment-roberta-large-english/Occlusion/contraction/sentence_not_2_contraction.pkl
+  Accuracy: 0.214 | pos: 0.139 | neg: 0.294
+
+Performance saved to /home/papadopu/xai-nlp/new_results/siebert/sentiment-roberta-large-english/performance.csv
+Job ended: Mon Jun  8 01:38:54 PM UTC 2026

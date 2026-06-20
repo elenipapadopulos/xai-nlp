@@ -1,0 +1,11 @@
+model,folder,dataset,accuracy,acc_pos,acc_neg,acc_pos_label,acc_neg_label
+sentiment-roberta-large-english,aux_not,sentence_not_0_aux,0.8,0.6111111111111112,1.0,0.6111111111111112,1.0
+sentiment-roberta-large-english,aux_not,sentence_not_1_aux,0.6857142857142857,0.8888888888888888,0.4705882352941176,0.4705882352941176,0.8888888888888888
+sentiment-roberta-large-english,base,sentence_not_0,0.9857142857142858,0.9722222222222222,1.0,0.9722222222222222,1.0
+sentiment-roberta-large-english,base,sentence_not_1,0.9857142857142858,1.0,0.9705882352941176,0.9705882352941176,1.0
+sentiment-roberta-large-english,base,sentence_not_2,0.0285714285714285,0.0,0.0588235294117647,0.0,0.0588235294117647
+sentiment-roberta-large-english,base,sentence_not_3,0.8714285714285714,1.0,0.7352941176470589,0.7352941176470589,1.0
+sentiment-roberta-large-english,contraction,sentence_not_1_contraction,0.9857142857142858,1.0,0.9705882352941176,0.9705882352941176,1.0
+sentiment-roberta-large-english,contraction,sentence_not_2_contraction,0.2142857142857142,0.1388888888888889,0.2941176470588235,0.1388888888888889,0.2941176470588235
+sentiment-roberta-large-english,not_start,sentence_not_beginning,0.5428571428571428,0.9705882352941176,0.1388888888888889,0.1388888888888889,0.9705882352941176
+sentiment-roberta-large-english,not_start,sentence_not_beginning_not,0.1285714285714285,0.2647058823529412,0.0,0.0,0.2647058823529412

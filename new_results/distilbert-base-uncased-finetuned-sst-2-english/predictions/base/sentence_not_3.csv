@@ -1,0 +1,71 @@
+sentence,label,prediction,prob_neg,prob_pos
+"Even so, the movie was not not not unforgettable",negative,negative,0.9652966,0.034703426
+I have to say the film was not not not overlong,positive,positive,0.0019327888,0.9980672
+"Honestly, the plot was not not not confusing",positive,positive,0.019762063,0.98023796
+"All things considered, the acting was not not not masterful",negative,negative,0.9995977,0.00040232184
+"At the end of the day, the ending was not not not gripping",negative,negative,0.9995604,0.00043960274
+"Overall, the soundtrack was not not not gripping",negative,negative,0.9997552,0.00024478018
+I must admit the script was not not not captivating,negative,negative,0.99971145,0.0002884953
+"Undeniably, the cinematography was not not not compelling",negative,negative,0.99980634,0.00019372637
+"Having given it a fair chance, the cast was not not not thought-provoking",negative,negative,0.9024165,0.09758347
+"Compared to what I expected, the direction was not not not unforgettable",negative,negative,0.98268247,0.017317533
+"Clearly, the dialogue was not not not overlong",positive,positive,0.0011928998,0.9988071
+"To put it mildly, the pacing was not not not brilliant",negative,negative,0.9997013,0.00029864185
+There is no denying that the visual effects were not not not confusing,positive,positive,0.014959376,0.9850406
+"Frankly, the story was not not not disappointing",positive,positive,0.0006755608,0.99932444
+"Honestly, the pasta was not not not disappointing",positive,positive,0.00060619327,0.9993938
+"Clearly, the soup was not not not bland",positive,positive,0.0005262576,0.99947375
+"In the end, the bread was not not not cold",positive,positive,0.0018771162,0.9981229
+"Overall, the dessert was not not not fresh",negative,negative,0.99975735,0.00024259431
+"From my perspective, the steak was not not not salty",positive,positive,0.0037699062,0.99623007
+"To say the least, the salad was not not not heavenly",negative,negative,0.9994541,0.00054595666
+"Honestly, the coffee was not not not stale",positive,positive,0.00076421513,0.99923575
+"Let us be clear, the sauce was not not not fresh",negative,negative,0.9993333,0.00066667306
+I would argue the pizza was not not not tender,negative,negative,0.9993217,0.00067835534
+"That said, the meal was not not not bland",positive,positive,0.00052819285,0.99947184
+"Looking at it carefully, the wine was not not not tasteless",positive,positive,0.0011880107,0.99881196
+"Compared to what I expected, the appetizer was not not not stale",positive,positive,0.00042249076,0.99957746
+"Without a doubt, the portion was not not not undercooked",positive,positive,0.0020152961,0.99798465
+"Overall, the flavor was not not not perfectly seasoned",negative,negative,0.99977475,0.00022531173
+"No matter how you look at it, the teacher was not not not incompetent",positive,positive,0.0016703648,0.9983297
+"To put it mildly, the doctor was not not not welcoming",negative,negative,0.99977607,0.00022392755
+"All things considered, the colleague was not not not caring",negative,negative,0.99966824,0.00033172264
+The manager was not not not arrogant,positive,positive,0.0004903369,0.9995097
+I think the guide was not not not dismissive,positive,positive,0.001612233,0.9983878
+"Looking at it carefully, the host was not not not supportive",negative,negative,0.99970156,0.000298452
+There is no denying that the performer was not not not welcoming,negative,negative,0.96914816,0.030851923
+"To my surprise, the speaker was not not not incompetent",positive,positive,0.0011000665,0.99889994
+"All things considered, the coach was not not not talented",negative,negative,0.9995983,0.00040164526
+"If I am honest, the chef was not not not supportive",negative,negative,0.9988681,0.0011319338
+"In the end, the waiter was not not not unprofessional",positive,positive,0.0039155525,0.99608445
+"To my surprise, the receptionist was not not not talented",negative,negative,0.99969554,0.00030447685
+"Undeniably, the instructor was not not not engaging",negative,negative,0.9997845,0.00021547945
+"Clearly, the assistant was not not not inspiring",negative,negative,0.99980944,0.00019061624
+People kept saying the beach was not not not charming,negative,negative,0.9997602,0.00023978515
+"Undeniably, the park was not not not overcrowded",positive,positive,0.002169413,0.99783057
+"Much to my surprise, the museum was not not not cozy",negative,negative,0.9997042,0.00029574076
+"Much to my surprise, the restaurant was not not not breathtaking",negative,positive,0.007101329,0.9928987
+"To say the least, the hotel was not not not chaotic",positive,positive,0.0035137865,0.9964862
+"Looking back, the city was not not not unsafe",positive,positive,0.004312441,0.99568754
+"Frankly, the garden was not not not noisy",positive,positive,0.0013546868,0.99864537
+"At best, the view was not not not overcrowded",positive,positive,0.014852064,0.985148
+"Compared to what I expected, the village was not not not overpriced",positive,positive,0.00078887906,0.9992111
+I have to say the market was not not not cozy,negative,negative,0.9996809,0.0003191805
+People kept saying the neighborhood was not not not peaceful,negative,negative,0.99949217,0.0005077936
+"Clearly, the atmosphere was not not not beautiful",negative,negative,0.9996152,0.00038473724
+"Let us be clear, the venue was not not not overcrowded",positive,positive,0.0077285324,0.9922714
+"From the start, the landscape was not not not dirty",positive,positive,0.0027056949,0.99729425
+"Even so, the laptop was not not not overpriced",positive,positive,0.0046097077,0.9953903
+"If anything, the phone was not not not intuitive",negative,negative,0.9936107,0.006389332
+Everyone agreed that the camera was not not not fragile,positive,positive,0.0104203,0.98957974
+"Make no mistake, the headphones were not not not responsive",negative,negative,0.99965584,0.000344109
+I would argue the keyboard was not not not broken,positive,positive,0.0017296433,0.9982704
+"Admittedly, the watch was not not not slow",positive,positive,0.0010082864,0.99899167
+"Frankly, the bag was not not not durable",negative,negative,0.99980146,0.0001985606
+Who would have thought that the software was not not not sturdy,negative,negative,0.99931884,0.0006812036
+"Overall, the chair was not not not broken",positive,positive,0.000566702,0.9994332
+"From the start, the blender was not not not sturdy",negative,negative,0.99977726,0.00022275401
+"Clearly, the battery was not not not precise",negative,negative,0.9998116,0.00018838188
+"Overall, the screen was not not not overpriced",positive,positive,0.0013646563,0.99863535
+"Undeniably, the design was not not not flimsy",positive,positive,0.004658399,0.99534166
+People kept saying the packaging was not not not sturdy,negative,negative,0.9997719,0.00022810789

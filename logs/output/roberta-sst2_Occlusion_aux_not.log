@@ -1,0 +1,10 @@
+Job started: Fri Jun 19 08:43:48 AM UTC 2026
+Model : roberta-large-sst2
+Device: cpu
+Running 1 experiments:
+  ('Occlusion', 'not_start', 'sentence_not_beginning')
+  Saved: /home/papadopu/xai-nlp/new_results/roberta-large-sst2/Occlusion/not_start/sentence_not_beginning.pkl
+  Accuracy: 0.957 | pos: 0.917 | neg: 1.000
+
+Performance saved to /home/papadopu/xai-nlp/new_results/roberta-large-sst2/performance.csv
+Job ended: Fri Jun 19 08:45:17 AM UTC 2026

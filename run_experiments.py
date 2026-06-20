@@ -1,27 +1,35 @@
 """
 run_experiments.py — cluster-ready NLP XAI attribution runner.
 Parallelization strategy:
-  - by method  : python run_experiments.py --method IG --model distilbert
-  - by folder  : python run_experiments.py --folder contraction --model distilbert
-  - by masking : python run_experiments.py --method IG --masking_method pad --model roberta
+    - by method  : python run_experiments.py --method IG --model distilbert
+    - by folder  : python run_experiments.py --folder contraction --model distilbert
+    - by masking : python run_experiments.py --method IG --masking_method pad --model roberta
 Method & Masking Constraints:
-  - Occlusion / Shap / LIME: Executed without masking overrides.
-  - Integrated Gradients (IG): Supports all masking strategies except 'from_disk' (pad, cls, sep, mask, unk, zero).
-  - Expected Gradients (EG): Restricted to 'from_disk' masking strategy (requires --from_disk_path).
+    - Occlusion / Shap / LIME: Executed without masking overrides.
+    - Integrated Gradients (IG): Supports all masking strategies except 'from_disk' (pad, cls, sep, mask, unk, zero).
+    - Expected Gradients (EG): Restricted to 'from_disk' masking strategy (requires --from_disk_path).
 Dataset Processing:
-  - All folders and files (including 'base') are processed uniformly.
-  - No automatic exclusion of previously completed experiments; all requested combinations are generated.
+    - All folders and files (including 'base') are processed uniformly.
+    - No automatic exclusion of previously completed experiments; all requested combinations are generated.
 Output Path:
-  results/{method}/{folder}/{filename}_{masking_method}.pkl
-Example cluster usage (one job per method/masking combination):
-  python run_experiments.py --method Occlusion --model distilbert
-  python run_experiments.py --method LIME      --model distilbert
-  python run_experiments.py --method IG        --model distilbert --masking_method zero
-  python run_experiments.py --method EG        --model distilbert --from_disk_path /path/to/input_ids
-  Or by folder:
-  python run_experiments.py --folder contraction --model distilbert
-  python run_experiments.py --folder base      --model roberta
+    results/{method}/{folder}/{filename}_{masking_method}.pkl
+    Example cluster usage (one job per method/masking combination):
+    python run_experiments.py --method Occlusion --model distilbert
+    python run_experiments.py --method LIME      --model distilbert
+    python run_experiments.py --method IG        --model distilbert --masking_method zero
+    python run_experiments.py --method EG        --model distilbert --from_disk_path /path/to/input_ids
+Or by folder:
+    python run_experiments.py --folder contraction --model distilbert
+    python run_experiments.py --folder base      --model roberta
 """
+
+# # base experiments still to be done — all other base combinations are excluded
+# BASE_TODO = {
+#     ("LIME",      "base", "sentence_not_3"),
+#     ("Occlusion", "base", "sentence_not_2"),
+#     ("Shap",      "base", "sentence_not_2"),
+# }
+
 
 import argparse
 import glob
@@ -46,9 +54,8 @@ import xaiutils
 MODELS: Dict[str, str] = {
     "distilbert": "distilbert-base-uncased-finetuned-sst-2-english",
     "roberta":    "siebert/sentiment-roberta-large-english",
+    "roberta-sst2": "roberta-large-sst2"
 }
-
-MASKING_METHODS: List[str] = ["pad", "cls", "sep", "mask", "unk", "zero", "from_disk"]
 
 # Mapping enforces the strict constraint per method:
 # - IG: all masking methods except 'from_disk'
@@ -58,7 +65,7 @@ METHOD_MASK_MAPPING: Dict[str, List[Optional[str]]] = {
     "Occlusion": [None],
     "Shap": [None],
     "LIME": [None],
-    "IG": [m for m in MASKING_METHODS if m != "from_disk"],
+    "IG": ["pad", "cls", "sep", "mask", "unk", "zero"],
     "EG": ["from_disk"]
 }
 
@@ -71,7 +78,7 @@ def parse_arguments() -> argparse.Namespace:
     )
     parser.add_argument(
         "--model", 
-        choices=["distilbert", "roberta"], 
+        choices=["distilbert", "roberta", "roberta-sst2"], 
         default="distilbert",
         help="Pretrained model backbone."
     )
@@ -83,7 +90,7 @@ def parse_arguments() -> argparse.Namespace:
     )
     parser.add_argument(
         "--masking_method", 
-        choices=MASKING_METHODS,
+        choices=["pad", "cls", "sep", "mask", "unk", "zero", "from_disk"],
         default=None,
         help="Masking strategy for Integrated/Expected Gradients. Required for IG/EG."
     )
@@ -105,14 +112,15 @@ def parse_arguments() -> argparse.Namespace:
     )
     return parser.parse_args()
 
+
 def validate_arguments(args: argparse.Namespace) -> None:
     """Enforce logical constraints before experiment generation."""
     if args.method is None and args.folder is None:
         sys.exit("Error: Specify either --method or --folder.")
-    
+
     if args.method is not None and args.folder is not None:
         sys.exit("Error: Cannot specify both --method and --folder.")
-    
+
     if args.method in METHOD_MASK_MAPPING:
         allowed = METHOD_MASK_MAPPING[args.method]
         if args.masking_method is not None and args.masking_method not in allowed:
@@ -125,9 +133,10 @@ def validate_arguments(args: argparse.Namespace) -> None:
                 args.masking_method = allowed[0]
             else:
                 args.masking_method = "all"  # Handled by generator
-    
+
     if args.masking_method == "from_disk" and (args.from_disk_path is None or not Path(args.from_disk_path).exists()):
         sys.exit("Error: --from_disk_path must point to a valid directory.")
+
 
 # -----------------------------------------------------------------------------
 # Data & Model Loading
@@ -136,7 +145,7 @@ def load_datasets(project_root: str) -> Dict[str, Dict[str, pd.DataFrame]]:
     """Load all CSV datasets under data/ subdirectories."""
     datasets = defaultdict(dict)
     data_dir = Path(project_root) / "data"
-    
+
     for csv_path in data_dir.glob("**/*.csv"):
         folder = csv_path.parent.name
         name = csv_path.stem
@@ -147,6 +156,7 @@ def load_datasets(project_root: str) -> Dict[str, Dict[str, pd.DataFrame]]:
         
     return dict(datasets)
 
+
 def load_model_and_tokenizer(model_key: str, device: torch.device):
     """Load pretrained model and tokenizer, set to evaluation mode."""
     model_name = MODELS[model_key]
@@ -156,6 +166,7 @@ def load_model_and_tokenizer(model_key: str, device: torch.device):
     model.eval()
     print(f"Loaded {model_name} on {device}")
     return model, tokenizer
+
 
 # -----------------------------------------------------------------------------
 # Experiment Generation
@@ -172,7 +183,7 @@ def generate_experiments(
     """
     target_datasets = datasets if target_folder is None else {target_folder: datasets.get(target_folder, {})}
     experiments = []
-    
+
     for folder, files in target_datasets.items():
         methods_to_run = [method] if method is not None else ["Occlusion", "Shap", "LIME", "IG", "EG"]
         
@@ -195,6 +206,7 @@ def generate_experiments(
                     
     return experiments
 
+
 # -----------------------------------------------------------------------------
 # XAI Utilities & Attribution Distribution
 # -----------------------------------------------------------------------------
@@ -205,6 +217,7 @@ EXPLANATION_FNS = {
     "IG":        xaiutils.integrated_gradients_explanation,
     "EG":        xaiutils.expected_gradients_explanation,
 }
+
 
 def get_token_attribution_distribution(model, tokenizer, dataset, method, masking_method=None, from_disk_path=None):
     fn            = EXPLANATION_FNS[method]
@@ -229,6 +242,7 @@ def get_token_attribution_distribution(model, tokenizer, dataset, method, maskin
         distributions.append(scores)
     return distributions
 
+
 # -----------------------------------------------------------------------------
 # Attribution Computation
 # -----------------------------------------------------------------------------
@@ -246,7 +260,7 @@ def compute_token_attributions(
     Replaces manual routing and internal stubs with the provided pipeline logic.
     """
     sentences = df["sentence"].tolist()
-    
+
     # Validate masking context before dispatch
     if masking_method == "from_disk" and from_disk_path is None:
         raise ValueError("from_disk_path is required for 'from_disk' masking strategy.")
@@ -260,6 +274,7 @@ def compute_token_attributions(
         masking_method=masking_method,
         from_disk_path=from_disk_path
     )
+
 
 # -----------------------------------------------------------------------------
 # Execution Loop
@@ -275,14 +290,20 @@ def run_experiments(
     from_disk_path: Optional[str]
 ) -> None:
     results_root = Path(project_root) / "results" / MODELS.get(model_id, "default")
+    results_root.mkdir(parents=True, exist_ok=True)
     if from_disk_path is not None:
         from_disk_path = Path(from_disk_path) / model_id
     
+    # Performance tracking
+    perf_records = []
+    perf_csv = results_root / "performance.csv"
+
     # Build tqdm description dynamically
     has_masking = any(e[1] is not None for e in experiments)
     desc = "Masking strategy" if has_masking else "Attribution"
     pbar = tqdm(experiments, desc=f"Processing {desc}", unit="exp")
     
+    seen_datasets = set()  # avoid computing accuracy multiple times for same dataset
     for method, masking_method, folder, filename in pbar:
         df = datasets[folder][filename]
         distrib = compute_token_attributions(
@@ -301,6 +322,32 @@ def run_experiments(
             pickle.dump(distrib, f)
             
         pbar.set_postfix(saved=out_name)
+        
+        # Compute accuracy once per (folder, filename) regardless of method
+        if (folder, filename) not in seen_datasets:
+            seen_datasets.add((folder, filename))
+            acc, acc_pos, acc_neg = xaiutils.compute_accuracy(df, tokenizer, model, folder, filename, results_root)
+            perf_records.append({
+                "model":    MODELS.get(model_id, "default"),
+                "folder":   folder,
+                "dataset":  filename,
+                "accuracy": acc,
+                "acc_pos":  acc_pos,
+                "acc_neg":  acc_neg,
+            })
+            print(f"  Accuracy: {acc:.3f} | pos: {acc_pos:.3f} | neg: {acc_neg:.3f}")
+
+    # Save performance CSV (append if exists)
+    if perf_records:
+        df_perf = pd.DataFrame(perf_records)
+        if perf_csv.exists():
+            df_existing = pd.read_csv(perf_csv)
+            df_perf     = pd.concat([df_existing, df_perf], ignore_index=True).drop_duplicates(
+                subset=["model", "folder", "dataset"]
+            )
+        df_perf.to_csv(perf_csv, index=False)
+        print(f"\nPerformance saved to {perf_csv}")
+
 
 # -----------------------------------------------------------------------------
 # Main Entry Point
@@ -321,6 +368,9 @@ def main():
     )
     
     print(f"Starting {len(experiment_list)} experiments...\n")
+    for e in experiment_list:
+        print(f"  {e}")
+
     run_experiments(
         experiments=experiment_list,
         datasets=datasets,
