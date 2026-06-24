@@ -1,0 +1,71 @@
+sentence,label,prediction,prob_neg,prob_pos
+"Even so, the movie wasn't unforgettable",negative,negative,0.9992731,0.0007269211
+I have to say the film wasn't overlong,positive,positive,0.00461406,0.99538594
+"Honestly, the plot wasn't confusing",positive,positive,0.0051458958,0.99485415
+"All things considered, the acting wasn't masterful",negative,negative,0.9986368,0.0013632384
+"At the end of the day, the ending wasn't gripping",negative,negative,0.9995018,0.00049819314
+"Overall, the soundtrack wasn't gripping",negative,negative,0.9994986,0.0005013498
+I must admit the script wasn't captivating,negative,negative,0.99949086,0.00050915603
+"Undeniably, the cinematography wasn't compelling",negative,negative,0.9994861,0.0005138448
+"Having given it a fair chance, the cast wasn't thought-provoking",negative,negative,0.9993723,0.0006277649
+"Compared to what I expected, the direction wasn't unforgettable",negative,negative,0.99948967,0.0005102837
+"Clearly, the dialogue wasn't overlong",positive,positive,0.0028515756,0.99714845
+"To put it mildly, the pacing wasn't brilliant",negative,negative,0.9994325,0.0005674314
+There is no denying that the visual effects weren't confusing,positive,positive,0.003965132,0.9960349
+"Frankly, the story wasn't disappointing",positive,positive,0.0027757592,0.9972242
+"Honestly, the pasta wasn't disappointing",positive,positive,0.0031731064,0.9968268
+"Clearly, the soup wasn't bland",positive,positive,0.002207668,0.99779236
+"In the end, the bread wasn't cold",positive,negative,0.9994854,0.0005145908
+"Overall, the dessert wasn't fresh",negative,negative,0.99949193,0.0005081023
+"From my perspective, the steak wasn't salty",positive,positive,0.008745654,0.9912544
+"To say the least, the salad wasn't heavenly",negative,negative,0.99948186,0.00051814393
+"Honestly, the coffee wasn't stale",positive,positive,0.0046244166,0.9953755
+"Let us be clear, the sauce wasn't fresh",negative,negative,0.9986216,0.0013784412
+I would argue the pizza wasn't tender,negative,negative,0.9993488,0.0006512087
+"That said, the meal wasn't bland",positive,positive,0.010537545,0.98946244
+"Looking at it carefully, the wine wasn't tasteless",positive,positive,0.007844873,0.99215513
+"Compared to what I expected, the appetizer wasn't stale",positive,positive,0.0012556219,0.99874437
+"Without a doubt, the portion wasn't undercooked",positive,positive,0.0014771451,0.9985228
+"Overall, the flavor wasn't perfectly seasoned",negative,negative,0.99944943,0.0005506182
+"No matter how you look at it, the teacher wasn't incompetent",positive,positive,0.0041689654,0.9958311
+"To put it mildly, the doctor wasn't welcoming",negative,negative,0.99949455,0.0005053994
+"All things considered, the colleague wasn't caring",negative,negative,0.99915004,0.00084996456
+The manager wasn't arrogant,positive,positive,0.001460075,0.9985399
+I think the guide wasn't dismissive,positive,positive,0.0014983154,0.99850166
+"Looking at it carefully, the host wasn't supportive",negative,negative,0.9981933,0.0018067206
+There is no denying that the performer wasn't welcoming,negative,negative,0.999493,0.0005069552
+"To my surprise, the speaker wasn't incompetent",positive,positive,0.0015259491,0.99847406
+"All things considered, the coach wasn't talented",negative,negative,0.99949336,0.0005066321
+"If I am honest, the chef wasn't supportive",negative,negative,0.9994842,0.00051581854
+"In the end, the waiter wasn't unprofessional",positive,positive,0.0029056421,0.9970944
+"To my surprise, the receptionist wasn't talented",negative,negative,0.9993956,0.0006043259
+"Undeniably, the instructor wasn't engaging",negative,negative,0.999503,0.0004970334
+"Clearly, the assistant wasn't inspiring",negative,negative,0.9994992,0.00050078
+People kept saying the beach wasn't charming,negative,negative,0.9992793,0.00072074676
+"Undeniably, the park wasn't overcrowded",positive,positive,0.0023376213,0.9976624
+"Much to my surprise, the museum wasn't cozy",negative,negative,0.99920976,0.0007902677
+"Much to my surprise, the restaurant wasn't breathtaking",negative,negative,0.9986558,0.0013441766
+"To say the least, the hotel wasn't chaotic",positive,positive,0.0035682975,0.9964317
+"Looking back, the city wasn't unsafe",positive,positive,0.0071505574,0.99284947
+"Frankly, the garden wasn't noisy",positive,positive,0.0074955574,0.9925045
+"At best, the view wasn't overcrowded",positive,positive,0.0040013893,0.9959986
+"Compared to what I expected, the village wasn't overpriced",positive,positive,0.0015592715,0.9984407
+I have to say the market wasn't cozy,negative,negative,0.9982377,0.0017622749
+People kept saying the neighborhood wasn't peaceful,negative,negative,0.9989625,0.001037477
+"Clearly, the atmosphere wasn't beautiful",negative,negative,0.9994925,0.0005074143
+"Let us be clear, the venue wasn't overcrowded",positive,positive,0.0039822604,0.99601775
+"From the start, the landscape wasn't dirty",positive,positive,0.0015970698,0.9984029
+"Even so, the laptop wasn't overpriced",positive,positive,0.0028498606,0.9971501
+"If anything, the phone wasn't intuitive",negative,negative,0.9994885,0.0005114982
+Everyone agreed that the camera wasn't fragile,positive,positive,0.0016154576,0.9983846
+"Make no mistake, the headphones weren't responsive",negative,negative,0.99949515,0.000504826
+I would argue the keyboard wasn't broken,positive,positive,0.02957224,0.9704278
+"Admittedly, the watch wasn't slow",positive,positive,0.012825453,0.98717463
+"Frankly, the bag wasn't durable",negative,negative,0.99948585,0.0005141731
+Who would have thought that the software wasn't sturdy,negative,negative,0.99780303,0.0021970044
+"Overall, the chair wasn't broken",positive,positive,0.0022024412,0.9977976
+"From the start, the blender wasn't sturdy",negative,negative,0.999501,0.000499023
+"Clearly, the battery wasn't precise",negative,negative,0.99949026,0.0005096826
+"Overall, the screen wasn't overpriced",positive,positive,0.0016801272,0.9983198
+"Undeniably, the design wasn't flimsy",positive,positive,0.0020170873,0.99798286
+People kept saying the packaging wasn't sturdy,negative,negative,0.99929035,0.00070962

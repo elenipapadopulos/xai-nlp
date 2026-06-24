@@ -1,0 +1,71 @@
+sentence,label,prediction,prob_neg,prob_pos
+"Even so, the movie was unforgettable",positive,positive,0.0012277307,0.9987722
+I have to say the film was overlong,negative,negative,0.9994709,0.0005291067
+"Honestly, the plot was confusing",negative,negative,0.99947685,0.0005231672
+"All things considered, the acting was masterful",positive,positive,0.0012227098,0.99877733
+"At the end of the day, the ending was gripping",positive,positive,0.0011145916,0.99888545
+"Overall, the soundtrack was gripping",positive,positive,0.0011644623,0.9988355
+I must admit the script was captivating,positive,positive,0.0029896637,0.99701035
+"Undeniably, the cinematography was compelling",positive,positive,0.001352894,0.99864715
+"Having given it a fair chance, the cast was thought-provoking",positive,positive,0.0012796572,0.9987204
+"Compared to what I expected, the direction was unforgettable",positive,positive,0.0010675925,0.9989324
+"Clearly, the dialogue was overlong",negative,negative,0.99948126,0.0005187508
+"To put it mildly, the pacing was brilliant",positive,positive,0.0012849543,0.99871504
+There is no denying that the visual effects were confusing,negative,negative,0.9994424,0.0005576457
+"Frankly, the story was disappointing",negative,negative,0.999498,0.0005019722
+"Honestly, the pasta was disappointing",negative,negative,0.999498,0.0005019404
+"Clearly, the soup was bland",negative,negative,0.99948967,0.0005102769
+"In the end, the bread was cold",negative,negative,0.99910647,0.0008934817
+"Overall, the dessert was fresh",positive,positive,0.001195347,0.9988047
+"From my perspective, the steak was salty",negative,negative,0.9993518,0.00064818136
+"To say the least, the salad was heavenly",positive,positive,0.0011902115,0.9988098
+"Honestly, the coffee was stale",negative,negative,0.99946624,0.0005338282
+"Let us be clear, the sauce was fresh",positive,positive,0.0018505529,0.9981495
+I would argue the pizza was tender,positive,negative,0.9918332,0.008166787
+"That said, the meal was bland",negative,negative,0.99941635,0.00058362435
+"Looking at it carefully, the wine was tasteless",negative,negative,0.99946195,0.0005380748
+"Compared to what I expected, the appetizer was stale",negative,negative,0.9994942,0.00050577294
+"Without a doubt, the portion was undercooked",negative,negative,0.99949694,0.0005030749
+"Overall, the flavor was perfectly seasoned",positive,positive,0.0011193336,0.9988807
+"No matter how you look at it, the teacher was incompetent",negative,negative,0.9994978,0.000502235
+"To put it mildly, the doctor was welcoming",positive,positive,0.0015023192,0.9984977
+"All things considered, the colleague was caring",positive,positive,0.0014660172,0.99853396
+The manager was arrogant,negative,negative,0.9993892,0.00061076577
+I think the guide was dismissive,negative,negative,0.99949527,0.0005047573
+"Looking at it carefully, the host was supportive",positive,positive,0.0013464901,0.99865353
+There is no denying that the performer was welcoming,positive,positive,0.00154493,0.99845505
+"To my surprise, the speaker was incompetent",negative,negative,0.9994966,0.00050342485
+"All things considered, the coach was talented",positive,positive,0.0018788563,0.9981211
+"If I am honest, the chef was supportive",positive,positive,0.002260385,0.9977397
+"In the end, the waiter was unprofessional",negative,negative,0.99950397,0.0004960731
+"To my surprise, the receptionist was talented",positive,positive,0.0012569005,0.9987431
+"Undeniably, the instructor was engaging",positive,positive,0.0013525176,0.9986475
+"Clearly, the assistant was inspiring",positive,positive,0.0013791976,0.99862075
+People kept saying the beach was charming,positive,positive,0.0022568153,0.99774325
+"Undeniably, the park was overcrowded",negative,negative,0.9991404,0.0008596203
+"Much to my surprise, the museum was cozy",positive,positive,0.0011310214,0.998869
+"Much to my surprise, the restaurant was breathtaking",positive,positive,0.0011240966,0.9988759
+"To say the least, the hotel was chaotic",negative,negative,0.9994923,0.0005076581
+"Looking back, the city was unsafe",negative,negative,0.9984963,0.0015036529
+"Frankly, the garden was noisy",negative,negative,0.99913675,0.0008633079
+"At best, the view was overcrowded",negative,negative,0.99947745,0.00052259106
+"Compared to what I expected, the village was overpriced",negative,negative,0.9994956,0.00050440227
+I have to say the market was cozy,positive,positive,0.0013044744,0.99869555
+People kept saying the neighborhood was peaceful,positive,positive,0.0044807508,0.9955193
+"Clearly, the atmosphere was beautiful",positive,positive,0.0012127449,0.9987872
+"Let us be clear, the venue was overcrowded",negative,negative,0.9986889,0.0013110945
+"From the start, the landscape was dirty",negative,negative,0.9994128,0.0005872838
+"Even so, the laptop was overpriced",negative,negative,0.9994067,0.00059336476
+"If anything, the phone was intuitive",positive,positive,0.001307083,0.9986929
+Everyone agreed that the camera was fragile,negative,negative,0.9992828,0.0007172837
+"Make no mistake, the headphones were responsive",positive,positive,0.0012883376,0.9987117
+I would argue the keyboard was broken,negative,negative,0.9994455,0.00055453356
+"Admittedly, the watch was slow",negative,negative,0.9930627,0.0069373045
+"Frankly, the bag was durable",positive,positive,0.0013008899,0.99869907
+Who would have thought that the software was sturdy,positive,positive,0.0028103483,0.9971897
+"Overall, the chair was broken",negative,negative,0.99949884,0.00050109904
+"From the start, the blender was sturdy",positive,positive,0.001166058,0.99883395
+"Clearly, the battery was precise",positive,positive,0.001340319,0.9986596
+"Overall, the screen was overpriced",negative,negative,0.999501,0.0004990566
+"Undeniably, the design was flimsy",negative,negative,0.99947983,0.0005201396
+People kept saying the packaging was sturdy,positive,positive,0.008818759,0.99118125

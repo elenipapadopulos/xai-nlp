@@ -1,0 +1,11 @@
+model,folder,dataset,accuracy,acc_pos,acc_neg
+siebert/sentiment-roberta-large-english,aux_not,sentence_not_1_aux,0.6857142857142857,0.47058823529411764,0.8888888888888888
+siebert/sentiment-roberta-large-english,aux_not,sentence_not_0_aux,0.8,0.6111111111111112,1.0
+siebert/sentiment-roberta-large-english,contraction,sentence_not_2_contraction,0.21428571428571427,0.1388888888888889,0.29411764705882354
+siebert/sentiment-roberta-large-english,contraction,sentence_not_1_contraction,0.9857142857142858,0.9705882352941176,1.0
+siebert/sentiment-roberta-large-english,not_start,sentence_not_beginning,0.5428571428571428,0.1388888888888889,0.9705882352941176
+siebert/sentiment-roberta-large-english,not_start,sentence_not_beginning_not,0.12857142857142856,0.0,0.2647058823529412
+siebert/sentiment-roberta-large-english,base,sentence_not_3,0.8714285714285714,0.7352941176470589,1.0
+siebert/sentiment-roberta-large-english,base,sentence_not_0,0.9857142857142858,0.9722222222222222,1.0
+siebert/sentiment-roberta-large-english,base,sentence_not_1,0.9857142857142858,0.9705882352941176,1.0
+siebert/sentiment-roberta-large-english,base,sentence_not_2,0.02857142857142857,0.0,0.058823529411764705
